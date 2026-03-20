@@ -1,0 +1,1285 @@
+{
+  "id": "ec8f8a65-f861-45c7-b302-80f0be81a051",
+  "name": "Maximising cart value",
+  "workspaceId": "830b1924-05c2-4a15-b3d0-9d33d541d544",
+  "createdAt": "2026-03-18T22:30:12.816Z",
+  "updatedAt": "2026-03-19T06:46:25.192Z",
+  "nodes": [
+    {
+      "id": "3b0c47e8-30c3-430a-b6c3-960550337ff4",
+      "type": "mindmap",
+      "position": {
+        "x": 425.7136189531768,
+        "y": 309.1913902215368
+      },
+      "data": {
+        "title": "New node",
+        "body": "",
+        "tag": "hold",
+        "createdAt": "2026-03-18T22:36:51.772Z",
+        "updatedAt": "2026-03-18T22:36:51.772Z"
+      },
+      "width": 84,
+      "height": 60,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": 425.7136189531768,
+        "y": 309.1913902215368
+      }
+    },
+    {
+      "id": "677fde94-adff-459b-ae40-471b78ea678e",
+      "type": "mindmap",
+      "position": {
+        "x": 417.192517884707,
+        "y": 426.1200132410229
+      },
+      "data": {
+        "title": "New node",
+        "body": "",
+        "tag": "hold",
+        "createdAt": "2026-03-18T22:38:57.655Z",
+        "updatedAt": "2026-03-18T22:38:57.655Z"
+      },
+      "width": 84,
+      "height": 60,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 417.192517884707,
+        "y": 426.1200132410229
+      },
+      "dragging": false
+    },
+    {
+      "id": "8a71fe45-8e33-4854-baa4-f2ea095e4c51",
+      "type": "mindmap",
+      "position": {
+        "x": -132.28243922884104,
+        "y": 272.0881002735642
+      },
+      "data": {
+        "title": "In a new problem of Tortoise, we have",
+        "body": "In a new problem of Tortoise, we have a concept of eligibility. Eligibility defines the total amount of products that an employee can request from our platform, which is Tortoise. Now, based on companies to companies, there is a limitation of one device type per year. So it could",
+        "annotation": "In a new problem of Tortoise, we have a concept of eligibility. Eligibility defines the total amount of products that an employee can request from our platform, which is Tortoise. Now, based on companies to companies, there is a limitation of one device type per year. So it could be one mobile phone a year or one tablet a year. And so forth, people can go and order these devices for consecutive years. Now, the problem that I want to work on is that people are not completely utilizing their eligibility limits, and hence they are not able to maximize the benefit out of this benefit.",
+        "tag": "commit",
+        "isDraft": false,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-19T06:13:28.625Z"
+      },
+      "width": 1458,
+      "height": 95,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -132.28243922884104,
+        "y": 272.0881002735642
+      },
+      "resizing": false
+    },
+    {
+      "id": "5ac20d13-976a-429c-9021-7bf724130848",
+      "type": "mindmap",
+      "position": {
+        "x": 139.2988477267472,
+        "y": 295.02037353483234
+      },
+      "data": {
+        "title": "So I had a few ideas in mind",
+        "body": "So I had a few ideas in mind for which I can nudge users into showing what their consumption looks like for a particular device. If they've added something, how much does it impact their consumption limit? Showing them smart bundles which are about their limit or before or within",
+        "annotation": "So I had a few ideas in mind for which I can nudge users into showing what their consumption looks like for a particular device. If they've added something, how much does it impact their consumption limit? Showing them smart bundles which are about their limit or before or within their limits",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1483,
+      "height": 95,
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "afdb8e71-b021-4d90-b3e1-d779b0996910",
+      "type": "mindmap",
+      "position": {
+        "x": 389.14186764789764,
+        "y": 293.06912776361287
+      },
+      "data": {
+        "title": "So I want to brainstorm it with you.",
+        "body": "So I want to brainstorm it with you.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 224,
+      "height": 78
+    },
+    {
+      "id": "789e60f7-9ea2-4a31-89d5-a732d9256c36",
+      "type": "mindmap",
+      "position": {
+        "x": 664.506058862635,
+        "y": 307.4398019892304
+      },
+      "data": {
+        "title": "Show more 18 Feb This is a great",
+        "body": "Show more\n18 Feb\nThis is a great problem to dig into. Before we brainstorm solutions, let me make sure I understand the core tension here.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 746,
+      "height": 78
+    },
+    {
+      "id": "53dfd000-d19b-4952-a694-e236d8f14ba8",
+      "type": "mindmap",
+      "position": {
+        "x": -122.92000536752751,
+        "y": 501.31813560572823
+      },
+      "data": {
+        "title": "The issue isn't just awareness — employees likely",
+        "body": "The issue isn't just awareness — employees likely know they have a benefit. The real problem is probably a combination of things: they don't feel the urgency to use it, they don't know what's available within their limit, or the mental math of \"how much can I actually spend?\" cre",
+        "annotation": "The issue isn't just awareness — employees likely know they have a benefit. The real problem is probably a combination of things: they don't feel the urgency to use it, they don't know what's available within their limit, or the mental math of \"how much can I actually spend?\" creates enough friction that they don't bother. Does that feel right?",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1467,
+      "height": 95
+    },
+    {
+      "id": "c431f98e-acf7-4dae-9837-fa3f6dfed988",
+      "type": "mindmap",
+      "position": {
+        "x": 140.15994456664566,
+        "y": 506.37442419812476
+      },
+      "data": {
+        "title": "Let me throw out some directions and we",
+        "body": "Let me throw out some directions and we can go deeper on whichever resonate.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 444,
+      "height": 78,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 140.15994456664566,
+        "y": 506.37442419812476
+      },
+      "dragging": false
+    },
+    {
+      "id": "5b25d6b7-d1fc-4ba8-9935-e16723544d82",
+      "type": "mindmap",
+      "position": {
+        "x": 413.4286147174212,
+        "y": 508.36962786647456
+      },
+      "data": {
+        "title": "Making the limit feel real and tangible",
+        "body": "Making the limit feel real and tangible",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 240,
+      "height": 78
+    },
+    {
+      "id": "658396a4-a364-4201-b9f1-b13137a3055b",
+      "type": "mindmap",
+      "position": {
+        "x": 673.2595823957766,
+        "y": 497.30831722294147
+      },
+      "data": {
+        "title": "Right now \"eligibility\" is probably an abstract number.",
+        "body": "Right now \"eligibility\" is probably an abstract number. What if it felt more like a budget with a progress bar — but framed positively, like \"£400 remaining this year\" rather than consumed? The key is making unused eligibility feel like money left on the table, not just a neutral",
+        "annotation": "Right now \"eligibility\" is probably an abstract number. What if it felt more like a budget with a progress bar — but framed positively, like \"£400 remaining this year\" rather than consumed? The key is making unused eligibility feel like money left on the table, not just a neutral state. A year-end countdown (\"87 days left to use your benefit\") could create urgency without being pushy.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1438,
+      "height": 95
+    },
+    {
+      "id": "ffbd54ac-579a-4df8-967a-248a473501bf",
+      "type": "mindmap",
+      "position": {
+        "x": -132.03381795952924,
+        "y": 692.9199908035106
+      },
+      "data": {
+        "title": "Consumption impact as you browse",
+        "body": "Consumption impact as you browse",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 231,
+      "height": 78
+    },
+    {
+      "id": "8f011d3a-b3db-471f-a328-41e3a43110a2",
+      "type": "mindmap",
+      "position": {
+        "x": 130.20578191230905,
+        "y": 691.106240764891
+      },
+      "data": {
+        "title": "Your idea of showing how adding something impacts",
+        "body": "Your idea of showing how adding something impacts their limit is strong. Think of it like a live calculator — as they hover or add a product, the eligibility bar updates. This turns shopping into a game of optimization rather than a confusing math problem. The psychological trick",
+        "annotation": "Your idea of showing how adding something impacts their limit is strong. Think of it like a live calculator — as they hover or add a product, the eligibility bar updates. This turns shopping into a game of optimization rather than a confusing math problem. The psychological trick here is making people feel clever for maximizing, not pressured into spending.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1455,
+      "height": 95
+    },
+    {
+      "id": "c34d8850-da94-4537-8a4b-7a48ccc83479",
+      "type": "mindmap",
+      "position": {
+        "x": 407.1733256268971,
+        "y": 700.7949730323028
+      },
+      "data": {
+        "title": "This is probably your highest-leverage idea. Instead of",
+        "body": "This is probably your highest-leverage idea. Instead of showing individual products, you surface curated combinations — \"Phone + case + charger = £380, within your £400 limit.\" The bundle does the mental work for them. You could have tiers like \"Use exactly your limit,\" \"Just und",
+        "annotation": "This is probably your highest-leverage idea. Instead of showing individual products, you surface curated combinations — \"Phone + case + charger = £380, within your £400 limit.\" The bundle does the mental work for them. You could have tiers like \"Use exactly your limit,\" \"Just under,\" and \"Best value within budget.\" Bundles also solve the decision paralysis problem — choice is constrained in a helpful way.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1489,
+      "height": 95
+    },
+    {
+      "id": "940ec8ff-8a78-4ff5-82fd-f9ee61545436",
+      "type": "mindmap",
+      "position": {
+        "x": 674.9284630646823,
+        "y": 701.8996474064712
+      },
+      "data": {
+        "title": "Personalized nudges based on behavior",
+        "body": "Personalized nudges based on behavior",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 256,
+      "height": 78
+    },
+    {
+      "id": "39c5ab17-5f2b-45ef-916d-790b68f2195e",
+      "type": "mindmap",
+      "position": {
+        "x": -114.41162834785513,
+        "y": 906.2802535945909
+      },
+      "data": {
+        "title": "If someone browsed phones six months ago but",
+        "body": "If someone browsed phones six months ago but didn't order, that's a signal. A nudge like \"Your phone eligibility renews in 3 months — here's what's changed since you last looked\" is much more relevant than a generic reminder. Timing matters a lot here — the nudge that lands when ",
+        "annotation": "If someone browsed phones six months ago but didn't order, that's a signal. A nudge like \"Your phone eligibility renews in 3 months — here's what's changed since you last looked\" is much more relevant than a generic reminder. Timing matters a lot here — the nudge that lands when they're already thinking about it converts far better.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1492,
+      "height": 113
+    },
+    {
+      "id": "998fb3da-2a7c-43db-a3a0-4bf5fb321dfa",
+      "type": "mindmap",
+      "position": {
+        "x": 132.73693160834588,
+        "y": 908.7474739708322
+      },
+      "data": {
+        "title": "The angle I'd push you to think about",
+        "body": "The angle I'd push you to think about",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 238,
+      "height": 78
+    },
+    {
+      "id": "549a8622-be8d-4dc2-9cdf-e24b153039c2",
+      "type": "mindmap",
+      "position": {
+        "x": 395.0203733596913,
+        "y": 894.87850061703
+      },
+      "data": {
+        "title": "Most of these ideas assume the employee needs",
+        "body": "Most of these ideas assume the employee needs to be reminded. But there might be a deeper issue — employees don't fully understand what salary sacrifice actually saves them. If someone saw \"this £800 phone effectively costs you £520 after tax savings,\" that framing might be the s",
+        "annotation": "Most of these ideas assume the employee needs to be reminded. But there might be a deeper issue — employees don't fully understand what salary sacrifice actually saves them. If someone saw \"this £800 phone effectively costs you £520 after tax savings,\" that framing might be the strongest nudge of all. Is that kind of financial clarity currently surfaced in the product?",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1492,
+      "height": 113
+    },
+    {
+      "id": "232eda33-e2b4-49e7-85a2-2c66da0908d4",
+      "type": "mindmap",
+      "position": {
+        "x": null,
+        "y": null
+      },
+      "data": {
+        "title": "Where do you want to go deeper —",
+        "body": "Where do you want to go deeper — the eligibility visualization, bundles, or the nudge/notification strategy?",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 580,
+      "height": 78,
+      "selected": false,
+      "positionAbsolute": {
+        "x": null,
+        "y": null
+      },
+      "dragging": false
+    },
+    {
+      "id": "62a005e0-9a27-4536-aa3a-971937113996",
+      "type": "mindmap",
+      "position": {
+        "x": -114.25777014492657,
+        "y": 1094.0872780506097
+      },
+      "data": {
+        "title": "Here is how I have visualized the eligibility",
+        "body": "Here is how I have visualized the eligibility when the first user enters the home page. After this, whenever they add any device to the cart, the eligibility consumption is shown in the cart screen(image 2)",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1072,
+      "height": 78
+    },
+    {
+      "id": "483cd241-f94e-4dc3-9926-d27b5f214a0a",
+      "type": "mindmap",
+      "position": {
+        "x": 141.2699223623839,
+        "y": 1109.997971882516
+      },
+      "data": {
+        "title": "Now, card captures the maximum intent. There could",
+        "body": "Now, card captures the maximum intent. There could be multiple scenarios by which users land in the cart. They might add something to the cart, then go back, and then again add something and check their cart value. And the eligibility limit changes according to the same. I think ",
+        "annotation": "Now, card captures the maximum intent. There could be multiple scenarios by which users land in the cart. They might add something to the cart, then go back, and then again add something and check their cart value. And the eligibility limit changes according to the same. I think I have an idea around if someone has something in the cart and their eligibility consumption forecast is being shown. How about we persist in their entire shopping experience? For example, if they go to the cart and they go back to the catalogue page, how about we can show how much they can add more to avail maximum benefit?",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1478,
+      "height": 95
+    },
+    {
+      "id": "7b91bf2a-7a7c-4a0d-b222-8ec23671a653",
+      "type": "mindmap",
+      "position": {
+        "x": 395.8766475736559,
+        "y": 1109.429806730641
+      },
+      "data": {
+        "title": "And on that screen, we can show, if",
+        "body": "And on that screen, we can show, if they add more products, how much they would be saving. The role of eligibility is crucial till the products are checked out from the card. So I think for us there are three-four places actually where we can show eligibility limits and consumpti",
+        "annotation": "And on that screen, we can show, if they add more products, how much they would be saving. The role of eligibility is crucial till the products are checked out from the card. So I think for us there are three-four places actually where we can show eligibility limits and consumption of eligibility limits:\n1. Your home screen (which is image 1)\n2. PDP page (which is a product display page)\n3. The cart page\n4. The catalog page",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1456,
+      "height": 95
+    },
+    {
+      "id": "b3d9738f-4f6d-4029-8a86-49adb3443911",
+      "type": "mindmap",
+      "position": {
+        "x": 645.1615963244261,
+        "y": 1107.947571623849
+      },
+      "data": {
+        "title": "Show more 19 Feb Good thinking — persisting",
+        "body": "Show more\n19 Feb\nGood thinking — persisting the eligibility context across the shopping journey is the right instinct. Right now it feels like eligibility only becomes real at the cart, which is too late to influence browsing behavior. Let me react to each touchpoint and then sha",
+        "annotation": "Show more\n19 Feb\nGood thinking — persisting the eligibility context across the shopping journey is the right instinct. Right now it feels like eligibility only becomes real at the cart, which is too late to influence browsing behavior. Let me react to each touchpoint and then share an overarching thought.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1440,
+      "height": 95
+    },
+    {
+      "id": "d4dc38ec-341d-412d-8be1-b73776c8d5c7",
+      "type": "mindmap",
+      "position": {
+        "x": -110.52503212138464,
+        "y": 1294.520812767805
+      },
+      "data": {
+        "title": "What you have works as a starting state",
+        "body": "What you have works as a starting state — showing ₹0/5,00,000 sets context. But it's passive. For someone who's been browsing or has cart items, this widget should dynamically shift. Instead of \"Consumed limit,\" it could say \"₹3,84,176 left to use this year\" with a subtle urgency",
+        "annotation": "What you have works as a starting state — showing ₹0/5,00,000 sets context. But it's passive. For someone who's been browsing or has cart items, this widget should dynamically shift. Instead of \"Consumed limit,\" it could say \"₹3,84,176 left to use this year\" with a subtle urgency cue if they're past a certain date threshold. The widget is prime real estate — it's the first thing they see, so it should reflect their current state, not just the empty state.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1477,
+      "height": 95
+    },
+    {
+      "id": "08316c8b-6317-48eb-a1c0-5063aeac39f1",
+      "type": "mindmap",
+      "position": {
+        "x": 129.2891232937457,
+        "y": 1309.800670400399
+      },
+      "data": {
+        "title": "This is the most interesting intervention. If someone",
+        "body": "This is the most interesting intervention. If someone has items in cart and returns to browse, a persistent sticky banner or a contextual chip at the top could say something like \"You can add up to ₹34,176 more to maximize your benefit.\" This turns casual browsing into intentiona",
+        "annotation": "This is the most interesting intervention. If someone has items in cart and returns to browse, a persistent sticky banner or a contextual chip at the top could say something like \"You can add up to ₹34,176 more to maximize your benefit.\" This turns casual browsing into intentional shopping. You could even filter or badge products — a small \"Fits your remaining limit\" tag on eligible items would reduce decision effort significantly. The key question here is whether this feels helpful or pressuring — the framing and visual weight of this element will matter a lot.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1462,
+      "height": 95
+    },
+    {
+      "id": "9d2d6930-c1d2-4f5b-9b9d-5c1d8c767617",
+      "type": "mindmap",
+      "position": {
+        "x": 407.4416068624329,
+        "y": 1306.7887935988772
+      },
+      "data": {
+        "title": "This is where the impact visualization you mentioned",
+        "body": "This is where the impact visualization you mentioned makes the most sense. When someone is looking at a product, show them a small eligibility meter that updates to reflect what it would look like if they added this. Something like \"Adding this uses ₹1,13,824 of your ₹1,50,000 li",
+        "annotation": "This is where the impact visualization you mentioned makes the most sense. When someone is looking at a product, show them a small eligibility meter that updates to reflect what it would look like if they added this. Something like \"Adding this uses ₹1,13,824 of your ₹1,50,000 limit — ₹36,176 remaining for accessories.\" This makes the abstract limit concrete at the moment of highest intent. You could also surface a \"Complete your benefit\" suggestion here — a small callout showing compatible accessories within the remaining limit.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1467,
+      "height": 95
+    },
+    {
+      "id": "5ca2d934-e92e-4c48-a875-d74fe2b331d5",
+      "type": "mindmap",
+      "position": {
+        "x": 665.0507269208238,
+        "y": 1306.4553807107193
+      },
+      "data": {
+        "title": "You already have the core mechanics here —",
+        "body": "You already have the core mechanics here — the progress bar and +₹1,15,824 delta. The gap I notice is that the Watch Ultra 3 as an add-on pushes the total to ₹2,18,724, which is well over the ₹1,50,000 limit, but it's not visually obvious how this affects eligibility consumption ",
+        "annotation": "You already have the core mechanics here — the progress bar and +₹1,15,824 delta. The gap I notice is that the Watch Ultra 3 as an add-on pushes the total to ₹2,18,724, which is well over the ₹1,50,000 limit, but it's not visually obvious how this affects eligibility consumption versus out-of-pocket costs. Worth making that distinction clearer — what portion is covered by the benefit versus what they pay additionally.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1447,
+      "height": 95
+    },
+    {
+      "id": "b8bb9e42-7ae5-4ede-9390-a8483629687e",
+      "type": "mindmap",
+      "position": {
+        "x": -131.43893513267545,
+        "y": 1509.6638683957117
+      },
+      "data": {
+        "title": "The mental model you're building toward is essentially",
+        "body": "The mental model you're building toward is essentially a persistent \"eligibility HUD\" — a piece of state that follows the user and contextually surfaces at each stage. The emotional job it does changes per screen: on the home it's awareness, on the catalog it's opportunity, on th",
+        "annotation": "The mental model you're building toward is essentially a persistent \"eligibility HUD\" — a piece of state that follows the user and contextually surfaces at each stage. The emotional job it does changes per screen: on the home it's awareness, on the catalog it's opportunity, on the PDP it's impact, and on the cart it's confirmation. If you design each one with that specific emotional job in mind rather than just showing the same meter everywhere, it'll feel cohesive but purposeful.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1461,
+      "height": 95
+    },
+    {
+      "id": "3d7ffdd0-16b7-4400-9738-3adf31271343",
+      "type": "mindmap",
+      "position": {
+        "x": 140.94997906448606,
+        "y": 1507.173771119454
+      },
+      "data": {
+        "title": "One thing worth exploring — should there be",
+        "body": "One thing worth exploring — should there be a dedicated \"My Benefit\" summary page that ties all of this together? A place where someone can see their full eligibility, what's in their cart, what they've used historically, and smart suggestions for what to add. It could serve as b",
+        "annotation": "One thing worth exploring — should there be a dedicated \"My Benefit\" summary page that ties all of this together? A place where someone can see their full eligibility, what's in their cart, what they've used historically, and smart suggestions for what to add. It could serve as both a planning tool and a re-engagement hook for people who aren't yet in a browsing session.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 1458,
+      "height": 95
+    },
+    {
+      "id": "2fa38824-0969-46e3-b06f-7f30027d3b69",
+      "type": "mindmap",
+      "position": {
+        "x": 389.89494173877216,
+        "y": 1494.6623103129625
+      },
+      "data": {
+        "title": "Where do you want to go deeper —",
+        "body": "Where do you want to go deeper — the catalog intervention, the PDP design, or the overall system logic?",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 571,
+      "height": 78
+    },
+    {
+      "id": "cb0fc2e7-f72e-4d88-8f13-18cd24ffa4ce",
+      "type": "mindmap",
+      "position": {
+        "x": 674.090356003408,
+        "y": 1495.082906591677
+      },
+      "data": {
+        "title": "lets go with overall system logic",
+        "body": "lets go with overall system logic",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 209,
+      "height": 78
+    },
+    {
+      "id": "e16ee4db-3b8d-4abe-a057-0459716891c2",
+      "type": "mindmap",
+      "position": {
+        "x": -121.68026861799105,
+        "y": 1708.0355689966366
+      },
+      "data": {
+        "title": "19 Feb Great. Let me map this out",
+        "body": "19 Feb\nGreat. Let me map this out as a system before we get into any specific screen.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 470,
+      "height": 78
+    },
+    {
+      "id": "cf254db0-9e15-4df6-9fc0-d6da1510cf9d",
+      "type": "mindmap",
+      "position": {
+        "x": 125.92849291211941,
+        "y": 1706.0201725737156
+      },
+      "data": {
+        "title": "At any point in time, a user is",
+        "body": "At any point in time, a user is in one of three eligibility states, and everything downstream should respond to which state they're in.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-18T22:49:35.689Z",
+        "updatedAt": "2026-03-18T22:49:35.689Z"
+      },
+      "width": 703,
+      "height": 78
+    },
+    {
+      "id": "e5002e16-aeea-4f21-9225-5e89506111ff",
+      "type": "mindmap",
+      "position": {
+        "x": -409.42160024607927,
+        "y": -271.8297838387416
+      },
+      "data": {
+        "title": "At a Glance\n| | |\n\n|---|---|\n\n| **Industry** | Financial",
+        "body": "At a Glance\n| | |\n\n|---|---|\n\n| **Industry** | Financial Services / Credit Ratings |\n\n| **Program Scale** | 2,306 active employees, 4,641 total lease requests |\n\n| **Leasing Partner** | Connect Equipment Leasing Private Limited |\n\n| **Program Type** | Off-books device benefit pro",
+        "tag": "commit",
+        "annotation": "At a Glance\n| | |\n\n|---|---|\n\n| **Industry** | Financial Services / Credit Ratings |\n\n| **Program Scale** | 2,306 active employees, 4,641 total lease requests |\n\n| **Leasing Partner** | Connect Equipment Leasing Private Limited |\n\n| **Program Type** | Off-books device benefit program |",
+        "linkedDocId": "22cd0682-be8a-49e5-98fa-77e6466c76eb",
+        "createdAt": "2026-03-19T05:44:44.362Z",
+        "updatedAt": "2026-03-19T05:45:01.558Z",
+        "isDraft": false
+      },
+      "width": 252,
+      "height": 357,
+      "selected": true,
+      "positionAbsolute": {
+        "x": -409.42160024607927,
+        "y": -271.8297838387416
+      },
+      "dragging": false,
+      "resizing": false,
+      "style": {
+        "width": 252,
+        "height": 357
+      }
+    },
+    {
+      "id": "289b305f-458d-4273-bf8a-42e402ef7f4c",
+      "type": "mindmap",
+      "position": {
+        "x": -164.09818762724268,
+        "y": 290.28535007896403
+      },
+      "data": {
+        "title": "Let me make sure I understand the constraint",
+        "body": "Let me make sure I understand the constraint before jumping in.\nThe goal is to nudge users to sell on Cashify so their savings feel larger — but the Cashify flow is separate, and you can't (or don't want to) deeply integrate it mid-order. Is that right?",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 1305,
+      "height": 78
+    },
+    {
+      "id": "d4046897-0808-4436-823b-fd113593a719",
+      "type": "mindmap",
+      "position": {
+        "x": 121.56959788050521,
+        "y": 309.1314659321488
+      },
+      "data": {
+        "title": "A few things that would sharpen the brainstorm:",
+        "body": "A few things that would sharpen the brainstorm:",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 301,
+      "height": 78
+    },
+    {
+      "id": "ac680ac8-d235-4510-8e00-9969dc4e237e",
+      "type": "mindmap",
+      "position": {
+        "x": 396.74198140914416,
+        "y": 307.6959123107877
+      },
+      "data": {
+        "title": "Both equally / Cart screen / Generic CTA",
+        "body": "Both equally / Cart screen / Generic CTA — go ahead with these assumptions if Prakhar doesn't respond, but his answers will meaningfully change the strategy.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 857,
+      "height": 78
+    },
+    {
+      "id": "2329d511-be33-41d0-b620-1988276f894c",
+      "type": "mindmap",
+      "position": {
+        "x": 683.8829326141936,
+        "y": 290.0681668751053
+      },
+      "data": {
+        "title": "Q: What's the primary job here? A: Both",
+        "body": "Q: What's the primary job here?\nA: Both equally",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 272,
+      "height": 78
+    },
+    {
+      "id": "719f934c-9734-436a-9b60-2f72b079fd7b",
+      "type": "mindmap",
+      "position": {
+        "x": -162.59863509576576,
+        "y": 514.2907388697417
+      },
+      "data": {
+        "title": "Q: Where in the order flow does the",
+        "body": "Q: Where in the order flow does the savings/deductions breakdown appear?\nA: PDP and  Cart",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 508,
+      "height": 78
+    },
+    {
+      "id": "6f232549-33bf-4b23-acdc-b90d235f825c",
+      "type": "mindmap",
+      "position": {
+        "x": 114.61370759084207,
+        "y": 520.3557645405903
+      },
+      "data": {
+        "title": "Q: Can you show a personalised Cashify estimate",
+        "body": "Q: Can you show a personalised Cashify estimate (based on device model the user owns) or only a generic CTA?\nA: Generic — just link out to Cashify",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 802,
+      "height": 78
+    },
+    {
+      "id": "c556c6ed-7d88-4fd3-a447-c1fde3f5919e",
+      "type": "mindmap",
+      "position": {
+        "x": 402.6817678424767,
+        "y": 526.9425683326419
+      },
+      "data": {
+        "title": "13 Mar Good constraints to work with. Generic",
+        "body": "13 Mar\nGood constraints to work with. Generic CTA means we can't do the \"your iPhone 13 is worth ₹18,000\" magic — but we can still make the nudge feel contextually smart rather than just a banner.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 1061,
+      "height": 78
+    },
+    {
+      "id": "4e3c8305-0461-4e92-b8fb-6ee1fe1f500a",
+      "type": "mindmap",
+      "position": {
+        "x": 681.6829047219013,
+        "y": 528.0804030788927
+      },
+      "data": {
+        "title": "Here's how I'd think about this across the",
+        "body": "Here's how I'd think about this across the flow:",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 269,
+      "height": 78
+    },
+    {
+      "id": "a646121b-7a25-409a-ad4a-223b6be4a6ee",
+      "type": "mindmap",
+      "position": {
+        "x": -159.77004203796082,
+        "y": 737.3205715104856
+      },
+      "data": {
+        "title": "The core mental model The Cashify nudge should",
+        "body": "The core mental model\nThe Cashify nudge should always be additive to the savings story, never a detour. The user is already in a \"how much will this cost me?\" mindset on both PDP and Cart — that's the exact moment to say \"you could bring this number down further.\"",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 1424,
+      "height": 78
+    },
+    {
+      "id": "c84d7c51-abc2-4611-8e12-c77a3b68ad03",
+      "type": "mindmap",
+      "position": {
+        "x": 118.13868581255802,
+        "y": 730.2719007356349
+      },
+      "data": {
+        "title": "So the framing isn't \"sell your old phone\"",
+        "body": "So the framing isn't \"sell your old phone\" — it's \"reduce your EMI / out-of-pocket cost.\"",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.661Z",
+        "updatedAt": "2026-03-19T06:13:18.661Z"
+      },
+      "width": 480,
+      "height": 78
+    },
+    {
+      "id": "aae55cdd-9d83-424a-97cc-774bd9b43447",
+      "type": "mindmap",
+      "position": {
+        "x": 399.8251885203111,
+        "y": 743.2050175780417
+      },
+      "data": {
+        "title": "Entry Point 1 — PDP (Early Intent Stage)",
+        "body": "Entry Point 1 — PDP (Early Intent Stage)\nThe user is evaluating a device. They haven't committed yet. The job here is to plant the idea, not convert it.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 795,
+      "height": 78
+    },
+    {
+      "id": "a261099c-0f4a-4a78-afb2-2c4768b76584",
+      "type": "mindmap",
+      "position": {
+        "x": 678.5108989273259,
+        "y": 731.8785055330035
+      },
+      "data": {
+        "title": "What to do: A passive, low-friction callout within",
+        "body": "What to do: A passive, low-friction callout within the savings/specs area — something like a small inline chip or footnote:",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 651,
+      "height": 78
+    },
+    {
+      "id": "73c18ad1-5fc6-4ad9-8bf4-3b50be041b4b",
+      "type": "mindmap",
+      "position": {
+        "x": -167.8496296368721,
+        "y": 968.147777884083
+      },
+      "data": {
+        "title": "\"Selling your old phone on Cashify could offset",
+        "body": "\"Selling your old phone on Cashify could offset your EMI further → Check value\"",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 444,
+      "height": 78
+    },
+    {
+      "id": "8832604c-120a-4b06-95e4-7786bf6c48d3",
+      "type": "mindmap",
+      "position": {
+        "x": 109.46267180145122,
+        "y": 967.8688398835726
+      },
+      "data": {
+        "title": "This links out to Cashify. It doesn't interrupt",
+        "body": "This links out to Cashify. It doesn't interrupt the flow. It just expands the user's mental accounting before they add to cart.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 657,
+      "height": 78
+    },
+    {
+      "id": "647a979b-323a-42b9-baf8-a4aec3411684",
+      "type": "mindmap",
+      "position": {
+        "x": 410.4940148721755,
+        "y": 968.0490159401892
+      },
+      "data": {
+        "title": "What NOT to do: A modal or bottom",
+        "body": "What NOT to do: A modal or bottom sheet here. Too early, too pushy. The user is still deciding on the device itself.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 617,
+      "height": 78
+    },
+    {
+      "id": "218398c6-65b5-438e-913e-6de9b0eb0436",
+      "type": "mindmap",
+      "position": {
+        "x": 688.442438246151,
+        "y": 969.0338538340468
+      },
+      "data": {
+        "title": "Entry Point 2 — Cart (High Intent, Best",
+        "body": "Entry Point 2 — Cart (High Intent, Best Moment)\nThis is the money spot. The user has picked their device and is now staring at the numbers — EMI, salary deduction, total savings. Their brain is actively doing math.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 1132,
+      "height": 78
+    },
+    {
+      "id": "a4788373-3c53-4f45-9a00-472cc352e293",
+      "type": "mindmap",
+      "position": {
+        "x": -154.16687681599586,
+        "y": 1178.0502220327735
+      },
+      "data": {
+        "title": "This is where you go one level up",
+        "body": "This is where you go one level up from a passive hint.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 304,
+      "height": 78
+    },
+    {
+      "id": "be805877-6833-4f4a-be7a-8fb3fd93ca16",
+      "type": "mindmap",
+      "position": {
+        "x": 132.28731688079432,
+        "y": 1172.4971941332103
+      },
+      "data": {
+        "title": "What to do: A contextual card within the",
+        "body": "What to do: A contextual card within the savings breakdown — visually connected to the deductions section, not floating as a banner. Something like:",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 801,
+      "height": 78
+    },
+    {
+      "id": "d20a137b-2a3d-4b38-932a-2654eb6d7b0d",
+      "type": "mindmap",
+      "position": {
+        "x": 400.6436235689935,
+        "y": 1179.2614217007647
+      },
+      "data": {
+        "title": "Sell your old device, save more Most employees",
+        "body": "Sell your old device, save more Most employees save an additional ₹5,000–₹15,000 on their upgrade by selling on Cashify. Get your estimate → [Opens Cashify]",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 857,
+      "height": 78
+    },
+    {
+      "id": "042f5443-1735-45f3-88c4-520842358c05",
+      "type": "mindmap",
+      "position": {
+        "x": 678.3710816250222,
+        "y": 1173.1073470050105
+      },
+      "data": {
+        "title": "The ₹5,000–₹15,000 range is a generic but believable",
+        "body": "The ₹5,000–₹15,000 range is a generic but believable anchor. Even without personalisation, a range makes it feel real rather than abstract. You'd want to validate this range with actual Cashify data for your user base.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 1144,
+      "height": 78
+    },
+    {
+      "id": "c75b2236-ec0f-4ffd-b658-24bb5b827690",
+      "type": "mindmap",
+      "position": {
+        "x": -145.94435821005035,
+        "y": 1392.1637098825604
+      },
+      "data": {
+        "title": "Placement: Directly below or adjacent to the total",
+        "body": "Placement: Directly below or adjacent to the total savings figure — so the visual hierarchy reads as: here's what Tortoise saves you → here's how you can save even more.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 913,
+      "height": 78
+    },
+    {
+      "id": "12bffae9-5f24-431f-b70c-1cbafa156eab",
+      "type": "mindmap",
+      "position": {
+        "x": 118.28776082090589,
+        "y": 1392.106480195756
+      },
+      "data": {
+        "title": "Entry Point 3 — Post-Order (Order Details Screen)",
+        "body": "Entry Point 3 — Post-Order (Order Details Screen)\nYou already have this as an access point. The opportunity here is different — the user has committed, the financial anxiety is lower, and now you can speak to action more directly.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 1218,
+      "height": 78
+    },
+    {
+      "id": "2a2c3e31-bf15-4f83-add6-73879e0dd258",
+      "type": "mindmap",
+      "position": {
+        "x": 407.72821295479764,
+        "y": 1403.7638306123472
+      },
+      "data": {
+        "title": "The framing shifts from \"save more on this",
+        "body": "The framing shifts from \"save more on this order\" to \"fund your next upgrade cycle.\"",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 465,
+      "height": 78
+    },
+    {
+      "id": "5f6c9d71-de25-4324-80af-7a0daaa8a560",
+      "type": "mindmap",
+      "position": {
+        "x": 676.074270384427,
+        "y": 1400.6954590456821
+      },
+      "data": {
+        "title": "\"Make the most of your upgrade — sell",
+        "body": "\"Make the most of your upgrade — sell your old device on Cashify before your new one arrives.\"",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 528,
+      "height": 78
+    },
+    {
+      "id": "6310306b-b764-469b-9378-ea15eba909b5",
+      "type": "mindmap",
+      "position": {
+        "x": -151.76659683008253,
+        "y": 1618.9425143119365
+      },
+      "data": {
+        "title": "A time-bound nudge works well here too —",
+        "body": "A time-bound nudge works well here too — \"Most people sell within 2 weeks of placing their order for best resale value\" — creates urgency without being dishonest.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 883,
+      "height": 78
+    },
+    {
+      "id": "517fab3c-0eb6-4bf4-816c-e1e6054c17b9",
+      "type": "mindmap",
+      "position": {
+        "x": 109.14749162640327,
+        "y": 1615.6418746086292
+      },
+      "data": {
+        "title": "What I'd deprioritise Home screen Cashify entry for",
+        "body": "What I'd deprioritise\nHome screen Cashify entry for this initiative — it's too disconnected from purchase intent to drive meaningful Cashify-linked conversions\nA dedicated interstitial screen mid-flow — you don't have personalised data to justify stopping the user\nThe one thing t",
+        "annotation": "What I'd deprioritise\nHome screen Cashify entry for this initiative — it's too disconnected from purchase intent to drive meaningful Cashify-linked conversions\nA dedicated interstitial screen mid-flow — you don't have personalised data to justify stopping the user\nThe one thing that would unlock personalisation later\nIf you add a voluntary \"What device are you currently using?\" field anywhere in the flow — even as a skippable question — you can start serving real estimates over time. Could live on the cart screen itself as a lightweight input. Worth keeping on the backlog.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 1465,
+      "height": 95
+    },
+    {
+      "id": "e55d99e4-b523-47ab-9dce-960276438923",
+      "type": "mindmap",
+      "position": {
+        "x": 397.2838495859878,
+        "y": 1613.4269617801388
+      },
+      "data": {
+        "title": "Where do you want to go deeper? The",
+        "body": "Where do you want to go deeper? The cart card design/copy, the PDP chip placement, or the post-order nudge strategy?",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 655,
+      "height": 78
+    },
+    {
+      "id": "f9df38ce-44d4-4d63-8ab8-c6f512f99fc5",
+      "type": "mindmap",
+      "position": {
+        "x": 673.1597001125699,
+        "y": 1626.1175882393622
+      },
+      "data": {
+        "title": "Claude is AI and can make mistakes. Please",
+        "body": "Claude is AI and can make mistakes. Please double-check responses.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T06:13:18.662Z",
+        "updatedAt": "2026-03-19T06:13:18.662Z"
+      },
+      "width": 389,
+      "height": 78
+    }
+  ],
+  "edges": [
+    {
+      "source": "3b0c47e8-30c3-430a-b6c3-960550337ff4",
+      "sourceHandle": null,
+      "target": "677fde94-adff-459b-ae40-471b78ea678e",
+      "targetHandle": null,
+      "id": "88287b2e-817c-4b26-b602-583460924c5b"
+    }
+  ],
+  "docs": [
+    {
+      "id": "22cd0682-be8a-49e5-98fa-77e6466c76eb",
+      "filename": "context_CRISIL.md",
+      "title": "context_CRISIL",
+      "importedAt": "2026-03-19T05:44:03.810Z"
+    }
+  ],
+  "customTags": []
+}

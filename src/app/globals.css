@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Light theme ────────────────────────────────────────────────────────────── */
+:root {
+  --bg:          #F8F7F4;
+  --surface:     #FFFFFF;
+  --surface-2:   #F4F3F0;
+  --surface-3:   #ECEAE4;
+  --border:      #E4E2DC;
+  --border-2:    #D0CEC8;
+  --ink:         #1A1A1A;
+  --ink-2:       #3A3835;
+  --ink-3:       #6A6864;
+  --muted:       #8A8880;
+  --muted-2:     #B4B2AC;
+  --muted-3:     #C8C6C0;
+  --accent:      #1A1A1A;
+  --accent-hover:#3A3835;
+  --accent-fg:   #FFFFFF;
+
+  /* ── Paper canvas ── */
+  --paper-bg:        #FDFCF9;
+  --paper-dot:       #D8D5CE;
+  --paper-node-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 12px rgba(0,0,0,0.05);
+  --paper-node-shadow-selected: 0 2px 8px rgba(0,0,0,0.10), 0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* ── Dark theme ─────────────────────────────────────────────────────────────── */
+.dark {
+  --bg:          #141312;
+  --surface:     #1C1B19;
+  --surface-2:   #222120;
+  --surface-3:   #2A2926;
+  --border:      #2E2C28;
+  --border-2:    #3A3835;
+  --ink:         #F0EEE9;
+  --ink-2:       #C8C5BE;
+  --ink-3:       #9A9890;
+  --muted:       #7A7870;
+  --muted-2:     #4E4C48;
+  --muted-3:     #3A3835;
+  --accent:      #F0EEE9;
+  --accent-hover:#C8C5BE;
+  --accent-fg:   #141312;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Smooth color transitions for theme switching */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 150ms;
+  transition-timing-function: ease;
+}
+
+/* ── Theme-aware utilities ──────────────────────────────────────────────────── */
+/* Applied via className — components use these instead of hardcoded hex */
+.bg-app        { background: var(--bg); }
+.bg-surface    { background: var(--surface); }
+.bg-surface-2  { background: var(--surface-2); }
+.bg-surface-3  { background: var(--surface-3); }
+.border-app    { border-color: var(--border); }
+.border-app-2  { border-color: var(--border-2); }
+.text-ink      { color: var(--ink); }
+.text-ink-2    { color: var(--ink-2); }
+.text-ink-3    { color: var(--ink-3); }
+.text-muted    { color: var(--muted); }
+.text-muted-2  { color: var(--muted-2); }
+.placeholder-themed::placeholder { color: var(--muted-2); }
+
+/* ── React Flow ─────────────────────────────────────────────────────────────── */
+.react-flow__node {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.react-flow__edge-path {
+  stroke: var(--border-2);
+  stroke-width: 1.5;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: var(--ink);
+}
+
+.react-flow__handle {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: var(--muted-3) !important;
+  border: 2px solid var(--bg) !important;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.react-flow__node:hover .react-flow__handle { opacity: 1; }
+.react-flow__handle:hover {
+  background: var(--ink) !important;
+  opacity: 1 !important;
+}
+
+.react-flow__controls {
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  color: var(--ink) !important;
+}
+
+.react-flow__controls-button:hover {
+  background: var(--surface-2) !important;
+}
+
+.react-flow__minimap {
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.react-flow__background pattern circle {
+  fill: var(--border-2);
+}
+
+.react-flow__pane { cursor: crosshair; }
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 100px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ── Annotations ─────────────────────────────────────────────────────────────── */
+.annotation-highlight {
+  background: rgba(180, 83, 9, 0.12);
+  border-bottom: 1.5px solid rgba(180, 83, 9, 0.4);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.annotation-highlight:hover { background: rgba(180, 83, 9, 0.2); }
+
+/* ── Selection ───────────────────────────────────────────────────────────────── */
+::selection { background: rgba(30, 64, 175, 0.15); }
+
+/* ── Focus ───────────────────────────────────────────────────────────────────── */
+*:focus-visible {
+  outline: 2px solid #3B82F6;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* ── Prose ───────────────────────────────────────────────────────────────────── */
+.prose-mindframe {
+  line-height: 1.7;
+  color: var(--ink);
+}
+
+.prose-mindframe h1 { font-size: 1.5rem; font-weight: 600; margin: 1.5rem 0 0.75rem; color: var(--ink); }
+.prose-mindframe h2 { font-size: 1.25rem; font-weight: 600; margin: 1.25rem 0 0.5rem; color: var(--ink); }
+.prose-mindframe h3 { font-size: 1.1rem; font-weight: 500; margin: 1rem 0 0.5rem; color: var(--ink); }
+.prose-mindframe p { margin: 0 0 1rem; color: var(--ink-2); }
+.prose-mindframe ul, .prose-mindframe ol { margin: 0 0 1rem; padding-left: 1.5rem; }
+.prose-mindframe li { margin: 0.25rem 0; color: var(--ink-2); }
+.prose-mindframe code { font-size: 0.875rem; background: var(--surface-3); padding: 0.1em 0.35em; border-radius: 3px; color: var(--ink); }
+.prose-mindframe pre { background: var(--surface-3); padding: 1rem; border-radius: 6px; overflow-x: auto; margin: 0 0 1rem; }
+.prose-mindframe blockquote { border-left: 3px solid var(--border); padding-left: 1rem; margin: 0 0 1rem; color: var(--muted); }
+.prose-mindframe hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.prose-mindframe a { color: #1E40AF; text-decoration: underline; }
+.prose-mindframe strong { font-weight: 600; color: var(--ink); }
+.prose-mindframe table { width: 100%; border-collapse: collapse; margin: 0 0 1rem; }
+.prose-mindframe th, .prose-mindframe td { border: 1px solid var(--border); padding: 0.5rem 0.75rem; font-size: 0.875rem; }
+.prose-mindframe th { background: var(--surface-2); font-weight: 600; }

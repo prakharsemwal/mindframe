@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mindframe",
+      "runtimeExecutable": "/bin/sh",
+      "runtimeArgs": ["-c", "cd /Users/prakhar/Desktop/Mindframe && npm run dev"],
+      "port": 3001,
+      "autoPort": true
+    }
+  ]
+}

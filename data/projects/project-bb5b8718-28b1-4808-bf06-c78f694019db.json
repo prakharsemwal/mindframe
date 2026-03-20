@@ -1,0 +1,729 @@
+{
+  "id": "bb5b8718-28b1-4808-bf06-c78f694019db",
+  "name": "Insurance",
+  "workspaceId": "830b1924-05c2-4a15-b3d0-9d33d541d544",
+  "createdAt": "2026-03-19T06:46:51.472Z",
+  "updatedAt": "2026-03-20T06:10:59.569Z",
+  "nodes": [
+    {
+      "id": "f7e563b9-fc5b-4559-8ffd-2a9d347b6471",
+      "type": "mindmap",
+      "position": {
+        "x": -227.39016110277575,
+        "y": 14.084417711491028
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "This data is genuinely useful — it changes",
+        "body": "This data is genuinely useful — it changes the eligibility problem from \"show users their limit\" to \"actively guide them toward the right products for their specific limit.\" Let me think through this properly.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-20T05:39:40.903Z"
+      },
+      "width": 200,
+      "height": 200,
+      "selected": true,
+      "positionAbsolute": {
+        "x": -227.39016110277575,
+        "y": 14.084417711491028
+      },
+      "dragging": false
+    },
+    {
+      "id": "e23c8b70-711c-40c7-af1c-45c4157d2ebc",
+      "type": "mindmap",
+      "position": {
+        "x": 161.06736394102757,
+        "y": 243.13348059287358
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "The Core Insight From the Data",
+        "body": "**The Core Insight From the Data**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 161.06736394102757,
+        "y": 243.13348059287358
+      },
+      "dragging": true
+    },
+    {
+      "id": "c03130a7-0dbd-4ddf-8a0b-36408a744364",
+      "type": "mindmap",
+      "position": {
+        "x": 387.3315630193814,
+        "y": 300.38656969415933
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "The most important number here isn't the average",
+        "body": "The most important number here isn't the average — it's that **56% of employees sit between ₹1L and ₹4L**, and the largest single segment (20.3%) is ₹2L-₹3L. This means your default product experience should be optimized for this band, not for the ₹5L+ Deloitte user who is probab",
+        "annotation": "The most important number here isn't the average — it's that **56% of employees sit between ₹1L and ₹4L**, and the largest single segment (20.3%) is ₹2L-₹3L. This means your default product experience should be optimized for this band, not for the ₹5L+ Deloitte user who is probably already motivated.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 271
+    },
+    {
+      "id": "abca4e81-d0bf-4c1c-b7b0-8112eb497348",
+      "type": "mindmap",
+      "position": {
+        "x": 672.2776530722604,
+        "y": 302.92776595634325
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "The second insight is the catalog gap above",
+        "body": "The second insight is the **catalog gap above ₹3.65L**. 17.7% of employees have limits above ₹4L but there's no single product that fills that space. These users are most at risk of under-utilizing their benefit — not because they don't want to spend it, but because the catalog d",
+        "annotation": "The second insight is the **catalog gap above ₹3.65L**. 17.7% of employees have limits above ₹4L but there's no single product that fills that space. These users are most at risk of under-utilizing their benefit — not because they don't want to spend it, but because the catalog doesn't give them an obvious way to.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 271
+    },
+    {
+      "id": "254f4462-0a12-4f47-8089-c9924350ec05",
+      "type": "mindmap",
+      "position": {
+        "x": -163.83567191788,
+        "y": 514.9936325255758
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "These two insights should drive completely different interventions.",
+        "body": "These two insights should drive completely different interventions.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 144,
+      "selected": false,
+      "dragging": false,
+      "positionAbsolute": {
+        "x": -163.83567191788,
+        "y": 514.9936325255758
+      }
+    },
+    {
+      "id": "cab60644-8071-42dd-987e-f4c3ead37725",
+      "type": "mindmap",
+      "position": {
+        "x": 114.9238966108971,
+        "y": 513.915519895181
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "1. Home screen — personalized hero messaging",
+        "body": "**1. Home screen — personalized hero messaging**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    },
+    {
+      "id": "c98a3bb7-3ccf-44dd-a0ad-3441e202109c",
+      "type": "mindmap",
+      "position": {
+        "x": 388.6956199188518,
+        "y": 526.8428250200003
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "Right now the home screen is generic for",
+        "body": "Right now the home screen is generic for everyone. But a user with ₹80,000 limit and a user with ₹5,00,000 limit have completely different shopping realities. The hero section and the \"Devices for you\" section should reflect this.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 218
+    },
+    {
+      "id": "20da4147-c99e-496b-90bb-348b929d442b",
+      "type": "mindmap",
+      "position": {
+        "x": 692.2583038441247,
+        "y": 515.4982450224753
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "For ₹50K-₹1L users, the messaging should be about",
+        "body": "For ₹50K-₹1L users, the messaging should be about flagship accessibility — \"Your benefit gets you a premium phone.\" This segment might not realize their limit reaches iPhone 15 or Pixel 9 territory. Surfacing that clearly changes the perception of the platform.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 236
+    },
+    {
+      "id": "9df46685-dcc2-4348-babc-bff55374067e",
+      "type": "mindmap",
+      "position": {
+        "x": -159.18674557463632,
+        "y": 746.472195366815
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "For ₹2L-₹3L users (the largest segment), the message",
+        "body": "For ₹2L-₹3L users (the largest segment), the message is about combinations — \"Your benefit covers a phone and a laptop.\" This is the combo opportunity you identified in the data.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 182
+    },
+    {
+      "id": "b46ae1bf-5f16-4c27-a0a4-0bed835a6a4f",
+      "type": "mindmap",
+      "position": {
+        "x": 122.44436431273657,
+        "y": 736.6152420200062
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "For ₹4L+ users, the message is about bundles",
+        "body": "For ₹4L+ users, the message is about bundles and ecosystems — \"Build your complete work setup.\" Without this framing, these users have no obvious way to spend their full limit.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 182
+    },
+    {
+      "id": "103b2756-a3c8-4655-baa1-c661fe1b7abb",
+      "type": "mindmap",
+      "position": {
+        "x": 400.7840214174697,
+        "y": 737.2442481181507
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "2. A \"Built for your limit\" section on",
+        "body": "**2. A \"Built for your limit\" section on home screen**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    },
+    {
+      "id": "f92f34b3-2e83-4022-9c28-6e09d3846200",
+      "type": "mindmap",
+      "position": {
+        "x": 687.0105152630395,
+        "y": 744.782749061698
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "Below the hero, instead of or alongside \"Devices",
+        "body": "Below the hero, instead of or alongside \"Devices for you,\" a section that shows 2-3 curated options specifically calculated to use the user's limit well. Not just products within their limit — products that together *approach* their limit meaningfully.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 236
+    },
+    {
+      "id": "b3a54fa8-f0fb-4f44-9db4-d1eff0b6e97b",
+      "type": "mindmap",
+      "position": {
+        "x": -152.21598003651238,
+        "y": 954.6265012586031
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "The logic: find the combination of available products",
+        "body": "The logic: find the combination of available products that gets closest to their total limit without exceeding it. Show that as a \"Recommended for you\" bundle. This is the smart bundle idea made concrete.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 215
+    },
+    {
+      "id": "455dd9ed-4300-4d02-88f2-e0ff2931403d",
+      "type": "mindmap",
+      "position": {
+        "x": 127.3730144236017,
+        "y": 952.7611359989681
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "3. Catalog — limit-aware category entry points",
+        "body": "**3. Catalog — limit-aware category entry points**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    },
+    {
+      "id": "31617817-e0c3-4230-b832-eaf7fbec5ec7",
+      "type": "mindmap",
+      "position": {
+        "x": 409.1951571882314,
+        "y": 953.048516550697
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "When a user enters the catalog with a",
+        "body": "When a user enters the catalog with a ₹1.2L limit, the category pills could show estimated product counts within their limit — \"Phones (166)\" rather than a generic count. This helps them understand the platform is sized for them.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 218
+    },
+    {
+      "id": "8c7e2108-e10f-43ab-a569-a1bbfb0c5085",
+      "type": "mindmap",
+      "position": {
+        "x": 683.8987920987545,
+        "y": 962.3841455227015
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "More importantly, users in the ₹1L-₹1.5L band need",
+        "body": "More importantly, users in the ₹1L-₹1.5L band need to know they can reach MacBook Air M2 territory. This probably isn't their first assumption. A subtle callout — \"Your limit reaches laptops\" — within the catalog could completely change their consideration set.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 236
+    },
+    {
+      "id": "adbcec00-1639-45ec-8f72-d21e4d018c27",
+      "type": "mindmap",
+      "position": {
+        "x": -161.55739667546965,
+        "y": 1172.3693864991112
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "4. Cross-category discovery nudges",
+        "body": "**4. Cross-category discovery nudges**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    },
+    {
+      "id": "a12346d0-e492-4dec-bd29-3fd4c76fa1e7",
+      "type": "mindmap",
+      "position": {
+        "x": 120.21159441822847,
+        "y": 1175.2963879733293
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "This is the most underexplored opportunity in the",
+        "body": "This is the most underexplored opportunity in the data. Most users probably think about one device at a time. But the data shows clear combo opportunities — especially for the ₹2L-₹3L band where MacBook Air + iPad mini, or iPhone Pro + Apple Watch, fit neatly.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 251
+    },
+    {
+      "id": "d18356ba-119f-4cc4-8bda-4d75ed4f53dd",
+      "type": "mindmap",
+      "position": {
+        "x": 394.2991025812818,
+        "y": 1174.7529570866202
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "These combos should be surfaced as named bundles",
+        "body": "These combos should be surfaced as named bundles with a combined price displayed against the limit. \"iPhone 15 Pro + Apple Watch Series 10 = ₹2,28,000 — within your ₹2,50,000 limit.\" The user doesn't have to do the math; you've done it for them.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 236
+    },
+    {
+      "id": "1f96a248-87c1-44be-a5bc-d706082afbe2",
+      "type": "mindmap",
+      "position": {
+        "x": 670.5443460543224,
+        "y": 1175.5713714254953
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "5. The ₹4L+ catalog gap problem",
+        "body": "**5. The ₹4L+ catalog gap problem**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    },
+    {
+      "id": "e7d55250-3cc8-4927-9ce6-e660530691b1",
+      "type": "mindmap",
+      "position": {
+        "x": -149.28062953252746,
+        "y": 1408.7288507394953
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "This needs its own intervention because it's a",
+        "body": "This needs its own intervention because it's a structural issue, not just a messaging one. Three approaches:",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 147
+    },
+    {
+      "id": "9bd9181c-5027-4ed9-8d1f-b357c67c4d44",
+      "type": "mindmap",
+      "position": {
+        "x": 106.1712488544145,
+        "y": 1397.0768684118775
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "First, surface bundle-first for these users on the",
+        "body": "First, surface bundle-first for these users on the home screen — skip the single-product browse entirely and lead with \"Complete setups for your ₹{limit}.\" This reframes the catalog from \"expensive products you can't find\" to \"curated setups sized for you.\"",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 236
+    },
+    {
+      "id": "499f2506-2b15-4d1d-a7fb-02adcf0118fc",
+      "type": "mindmap",
+      "position": {
+        "x": 410.78019705707635,
+        "y": 1395.6672614893075
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "Second, show progressive bundle building — \"Start with",
+        "body": "Second, show progressive bundle building — \"Start with MacBook Pro 14\", add iPad Pro, add AirPods Max — that's ₹4,85,000 of your ₹5,00,000.\" Guide them step by step toward maximization.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 200
+    },
+    {
+      "id": "c8e43858-4568-46ef-af24-197fe99786d3",
+      "type": "mindmap",
+      "position": {
+        "x": 680.1394278796679,
+        "y": 1406.2405643636591
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "Third, consider whether the catalog gap is a",
+        "body": "Third, consider whether the catalog gap is a product catalog problem worth flagging to the business — 3,793 employees with limits above ₹4L and no single product above ₹3.65L is significant revenue being left on the table.",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 218
+    },
+    {
+      "id": "0e2f766e-2cd7-4a9a-ba38-5abec0ae56b8",
+      "type": "mindmap",
+      "position": {
+        "x": -161.384884940956,
+        "y": 1626.6764275866653
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "6. PDP — \"What else fits after this\"",
+        "body": "**6. PDP — \"What else fits after this\"**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    },
+    {
+      "id": "525b1cc7-bdcd-400e-92e1-ed592056ecac",
+      "type": "mindmap",
+      "position": {
+        "x": 133.87206167889298,
+        "y": 1626.0994729198546
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "Once someone selects a product on the PDP,",
+        "body": "Once someone selects a product on the PDP, the remaining headroom calculation tells you exactly what combinations are possible. A section at the bottom of the PDP — \"With ₹{remaining} left, you could also add\" — turns a single product decision into a bundle discovery moment. This",
+        "annotation": "Once someone selects a product on the PDP, the remaining headroom calculation tells you exactly what combinations are possible. A section at the bottom of the PDP — \"With ₹{remaining} left, you could also add\" — turns a single product decision into a bundle discovery moment. This is more contextual and less pushy than a generic accessory recommendation because it's explicitly tied to their remaining benefit.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 253
+    },
+    {
+      "id": "23c0ff19-c98e-43e7-bb63-f9f54303d265",
+      "type": "mindmap",
+      "position": {
+        "x": 408.0642976211107,
+        "y": 1615.9235410632111
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "7. Limit-tier specific empty states",
+        "body": "**7. Limit-tier specific empty states**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    },
+    {
+      "id": "de03a8a8-9422-4a44-b848-ece75996c891",
+      "type": "mindmap",
+      "position": {
+        "x": 668.4614320998623,
+        "y": 1611.255196904331
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "When users in lower limit bands (₹50K-₹1L) first",
+        "body": "When users in lower limit bands (₹50K-₹1L) first open the platform and see flagship phones priced at ₹1.5L+, the platform might feel like it's not for them. The untouched state for these users needs different messaging — lead with what's achievable within their specific limit, no",
+        "annotation": "When users in lower limit bands (₹50K-₹1L) first open the platform and see flagship phones priced at ₹1.5L+, the platform might feel like it's not for them. The untouched state for these users needs different messaging — lead with what's achievable within their specific limit, not with the most premium products in the catalog.",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 253
+    },
+    {
+      "id": "ddef45be-1fec-423f-994c-fe96e207a879",
+      "type": "mindmap",
+      "position": {
+        "x": -153.02630273100314,
+        "y": 1840.437518720128
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "The Prioritization Question",
+        "body": "**The Prioritization Question**",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 78
+    },
+    {
+      "id": "812dd94c-ee5c-426d-89d8-2c14aed34c16",
+      "type": "mindmap",
+      "position": {
+        "x": 131.54212508912383,
+        "y": 1846.2307705184467
+      },
+      "style": {
+        "width": 200
+      },
+      "data": {
+        "title": "Before designing any of these, I'd want to",
+        "body": "Before designing any of these, I'd want to know two things:",
+        "annotation": "",
+        "tag": "hold",
+        "isDraft": true,
+        "source": "conversation",
+        "createdAt": "2026-03-19T10:45:54.442Z",
+        "updatedAt": "2026-03-19T10:45:54.442Z"
+      },
+      "width": 200,
+      "height": 111
+    }
+  ],
+  "edges": [
+    {
+      "source": "f7e563b9-fc5b-4559-8ffd-2a9d347b6471",
+      "sourceHandle": null,
+      "target": "e23c8b70-711c-40c7-af1c-45c4157d2ebc",
+      "targetHandle": null,
+      "id": "9be92423-b023-4806-981c-e0e92f09c0c0",
+      "selected": false
+    }
+  ],
+  "docs": [],
+  "customTags": []
+}

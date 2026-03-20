@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "mindframe": {
+      "command": "node",
+      "args": ["/Users/prakhar/Desktop/Mindframe/mcp-server/dist/index.js"],
+      "env": {
+        "MINDFRAME_API_URL": "http://localhost:3001"
+      }
+    }
+  }
+}

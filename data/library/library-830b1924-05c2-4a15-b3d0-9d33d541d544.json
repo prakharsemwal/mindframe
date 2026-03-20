@@ -1,0 +1,20 @@
+{
+  "workspaceId": "830b1924-05c2-4a15-b3d0-9d33d541d544",
+  "entries": [
+    {
+      "id": "c56632fc-177e-46da-b2b1-1b52e7333c4d",
+      "workspaceId": "830b1924-05c2-4a15-b3d0-9d33d541d544",
+      "title": "Customer Wiki - Crisil",
+      "category": "Service Rules",
+      "body": "# CRISIL Limited — Customer Context\n\n## At a Glance\n\n| | |\n|---|---|\n| **Industry** | Financial Services / Credit Ratings |\n| **Program Scale** | 2,306 active employees, 4,641 total lease requests |\n| **Leasing Partner** | Connect Equipment Leasing Private Limited |\n| **Program Type** | Off-books device benefit program |\n\n---\n\n## Program Structure\n\nCRISIL employees can lease **mobile phones and tablets** on a **6-month** rolling tenure — one of the shorter lease cycles among clients, indicating a preference for flexibility and frequent device refresh.\n\nAll devices are leased off the company's books, keeping the program simple from an accounting standpoint.\n\n---\n\n## Employee Experience\n\n### How Ordering Works\n- Employees need **manager approval** before a lease is confirmed — there's no automatic approval\n- Employees can **choose their own delivery address** (home or office), giving them flexibility\n- After delivery, employees must **confirm they've received** the device before the lease officially begins\n- **Insurance is mandatory** on every order — employees cannot opt out\n\n### What Employees Can Order\n- Mobile phones and tablets only\n- Maximum of **1 mobile** and **1 tablet** per employee\n- Maximum order value of **₹5,00,000**\n\n---\n\n## Key Features Enabled\n\n- **Salary deduction** — lease payments are deducted directly from payroll\n- **Cashify trade-in** — employees can trade in old devices\n- **In-app chatbot** — employees have access to a virtual support assistant\n- **Tax benefits** — input tax credit is captured on transactions\n- **Buyback at end of lease** — devices can be bought back at 2% of original value\n\n---\n\n## UI & Presentation Notes\n\n- **Promotional carousel** is active on the home screen — well-suited for campaigns and announcements\n- Standard payment terms display (salary impact and tax reduction card are visible)\n\n---\n\n## What Makes CRISIL Unique\n\n- **Shorter 6-month lease tenure** — employees refresh devices more frequently than most clients\n- **Employee-chosen delivery address** — more flexibility than most clients who restrict to office addresses\n- **High-value order cap (₹5L)** — openness to premium devices\n\n---\n\n*This document is intended as context for design, marketing, and communications work related to CRISIL's Tortoise program.*\n",
+      "createdAt": "2026-03-19T06:22:30.788Z",
+      "updatedAt": "2026-03-19T06:22:30.788Z"
+    }
+  ],
+  "categories": [
+    "Business Logic",
+    "Service Rules",
+    "Tech Constraints",
+    "Design Decisions"
+  ]
+}
