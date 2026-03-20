@@ -1,16 +1,20 @@
 import { NextRequest, NextResponse } from "next/server";
-import { promises as fs } from "fs";
 import path from "path";
+import { getImage } from "@/lib/storage";
 
 export async function GET(
   _req: NextRequest,
   { params }: { params: { path: string[] } }
 ) {
   const filename = params.path.join("/");
-  const filepath = path.join(process.cwd(), "data", "images", filename);
 
   try {
-    const data = await fs.readFile(filepath);
+    const data = await getImage(filename);
+
+    if (!data) {
+      return NextResponse.json({ error: "Not found" }, { status: 404 });
+    }
+
     const ext = path.extname(filename).toLowerCase();
     const mimeTypes: Record<string, string> = {
       ".jpg": "image/jpeg",
@@ -20,7 +24,7 @@ export async function GET(
       ".webp": "image/webp",
     };
     const contentType = mimeTypes[ext] || "application/octet-stream";
-    return new NextResponse(data, { headers: { "Content-Type": contentType } });
+    return new NextResponse(new Uint8Array(data), { headers: { "Content-Type": contentType } });
   } catch {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
