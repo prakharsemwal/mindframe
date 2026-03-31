@@ -42,6 +42,7 @@ import {
   AlignEndHorizontal,
 } from "lucide-react";
 import { cn, generateId, now } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import type {
   MindMapNode,
   MindMapEdge,
@@ -73,6 +74,8 @@ interface HistoryState {
 const MAX_HISTORY = 50;
 
 function MapCanvasInner({ project, library, onSave, onExport }: MapCanvasProps) {
+  const { theme } = useTheme();
+  const dotColor = theme === "dark" ? "#2E2C28" : "#D4D2CC";
   const [nodes, setNodes, onNodesChange] = useNodesState(project.nodes as any);
   const [edges, setEdges, onEdgesChange] = useEdgesState(project.edges as any);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
@@ -635,7 +638,7 @@ function MapCanvasInner({ project, library, onSave, onExport }: MapCanvasProps) 
             variant={BackgroundVariant.Dots}
             gap={20}
             size={1.5}
-            color="#D4D2CC"
+            color={dotColor}
           />
           <MiniMap
             nodeColor={(n) => {
@@ -648,7 +651,7 @@ function MapCanvasInner({ project, library, onSave, onExport }: MapCanvasProps) 
               };
               return colors[tag] || "#F0EEE9";
             }}
-            maskColor="rgba(248,247,244,0.7)"
+            maskColor={theme === "dark" ? "rgba(20,19,18,0.7)" : "rgba(248,247,244,0.7)"}
           />
         </ReactFlow>
 

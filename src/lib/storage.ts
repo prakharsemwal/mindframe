@@ -19,12 +19,17 @@ async function getRedis() {
 
   // Only use Redis if credentials are available (production)
   if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-    const { Redis } = await import("@upstash/redis");
-    redis = new Redis({
-      url: process.env.UPSTASH_REDIS_REST_URL,
-      token: process.env.UPSTASH_REDIS_REST_TOKEN,
-    });
-    return redis;
+    try {
+      const { Redis } = await import("@upstash/redis");
+      redis = new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+      });
+      return redis;
+    } catch (error) {
+      console.error("Failed to initialize Redis:", error);
+      return null;
+    }
   }
 
   return null;
@@ -64,20 +69,25 @@ export async function listWorkspaces(): Promise<Workspace[]> {
   const client = await getRedis();
 
   if (client) {
-    // Redis: get all workspace keys
-    const keys = await client.keys("workspace:*");
-    if (keys.length === 0) return [];
+    try {
+      // Redis: get all workspace keys
+      const keys = await client.keys("workspace:*");
+      if (keys.length === 0) return [];
 
-    const workspaces = await Promise.all(
-      keys.map(async (key) => {
-        const data = await client.get<Workspace>(key);
-        return data;
-      })
-    );
+      const workspaces = await Promise.all(
+        keys.map(async (key) => {
+          const data = await client.get<Workspace>(key);
+          return data;
+        })
+      );
 
-    return (workspaces.filter(Boolean) as Workspace[]).sort(
-      (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
-    );
+      return (workspaces.filter(Boolean) as Workspace[]).sort(
+        (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      );
+    } catch (error) {
+      console.error("Redis listWorkspaces error:", error);
+      // Fall through to file system fallback
+    }
   }
 
   // File system fallback
@@ -141,22 +151,27 @@ export async function listProjects(workspaceId: string): Promise<Project[]> {
   const client = await getRedis();
 
   if (client) {
-    const keys = await client.keys("project:*");
-    if (keys.length === 0) return [];
+    try {
+      const keys = await client.keys("project:*");
+      if (keys.length === 0) return [];
 
-    const projects = await Promise.all(
-      keys.map(async (key) => {
-        const data = await client.get<Project>(key);
-        return data;
-      })
-    );
-
-    return (projects.filter(Boolean) as Project[])
-      .filter((p) => p.workspaceId === workspaceId)
-      .sort(
-        (a, b) =>
-          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      const projects = await Promise.all(
+        keys.map(async (key) => {
+          const data = await client.get<Project>(key);
+          return data;
+        })
       );
+
+      return (projects.filter(Boolean) as Project[])
+        .filter((p) => p.workspaceId === workspaceId)
+        .sort(
+          (a, b) =>
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+        );
+    } catch (error) {
+      console.error("Redis listProjects error:", error);
+      // Fall through to file system fallback
+    }
   }
 
   // File system fallback

@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Device Usage Policy — M2P Solutions</title>
+  <style>
+    :root {
+      --brand:       #1a3c6e;
+      --brand-light: #e8eef7;
+      --accent:      #c8392b;
+      --ink:         #1c1e21;
+      --muted:       #5a5f6b;
+      --rule:        #d6dae2;
+      --bg:          #f7f8fa;
+      --surface:     #ffffff;
+      --sidebar-w:   260px;
+      --content-max: 760px;
+      --radius:      6px;
+      --mono:        "SF Mono", "Fira Mono", "Menlo", monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--ink);
+      background: var(--bg);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: fixed;
+      top: 0; left: 0;
+      width: var(--sidebar-w);
+      height: 100vh;
+      background: var(--surface);
+      border-right: 1px solid var(--rule);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      z-index: 100;
+    }
+
+    .sidebar-brand {
+      padding: 28px 24px 20px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .sidebar-brand .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-square {
+      width: 34px;
+      height: 34px;
+      background: var(--brand);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: -0.02em;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .sidebar-label {
+      padding: 20px 24px 8px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0 12px;
+    }
+
+    .sidebar nav ul li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 12px;
+      border-radius: var(--radius);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .sidebar nav ul li a:hover,
+    .sidebar nav ul li a.active {
+      background: var(--brand-light);
+      color: var(--brand);
+    }
+
+    .nav-num {
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--mono);
+      color: var(--brand);
+      opacity: 0.65;
+      min-width: 18px;
+    }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding: 20px 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 11.5px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* ── Main content ── */
+    .main {
+      margin-left: var(--sidebar-w);
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 0 48px 80px;
+    }
+
+    .content {
+      max-width: var(--content-max);
+      width: 100%;
+      padding-top: 56px;
+    }
+
+    /* ── Document header ── */
+    .doc-header {
+      padding-bottom: 36px;
+      border-bottom: 2px solid var(--brand);
+      margin-bottom: 48px;
+    }
+
+    .doc-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--brand-light);
+      color: var(--brand);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .doc-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand);
+    }
+
+    h1.doc-title {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--brand);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .doc-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .meta-item {
+      font-size: 12.5px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .meta-item strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .confidentiality-note {
+      margin-top: 18px;
+      padding: 12px 16px;
+      background: #fff8f7;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 12.5px;
+      color: #7a3028;
+      line-height: 1.55;
+    }
+
+    /* ── Section headings ── */
+    .section {
+      margin-bottom: 52px;
+      scroll-margin-top: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .section-num {
+      font-size: 11px;
+      font-weight: 700;
+      font-family: var(--mono);
+      color: var(--brand);
+      background: var(--brand-light);
+      padding: 3px 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    h2.section-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--brand);
+      letter-spacing: -0.01em;
+    }
+
+    h3.subsection-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 28px 0 12px;
+    }
+
+    /* ── Body text ── */
+    p {
+      color: #36393f;
+      margin-bottom: 14px;
+    }
+
+    /* ── Policy items / cards ── */
+    .policy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .policy-list li {
+      display: flex;
+      gap: 14px;
+      padding: 14px 18px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      align-items: flex-start;
+      font-size: 14px;
+      color: #36393f;
+      line-height: 1.65;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .policy-list li:hover {
+      border-color: #b0bcd4;
+      box-shadow: 0 2px 8px rgba(26,60,110,0.06);
+    }
+
+    .policy-list li .bullet {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--brand-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .policy-list li .bullet svg {
+      width: 10px;
+      height: 10px;
+      stroke: var(--brand);
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    /* nested lists inside li */
+    .policy-list li ul {
+      margin-top: 8px;
+      padding-left: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      list-style: none;
+    }
+
+    .policy-list li ul li {
+      border: none;
+      background: transparent;
+      padding: 0;
+      font-size: 13.5px;
+      color: var(--muted);
+      gap: 10px;
+    }
+
+    .policy-list li ul li:hover {
+      border: none;
+      box-shadow: none;
+    }
+
+    .policy-list li ul li::before {
+      content: "–";
+      color: var(--brand);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ── Warning / alert box ── */
+    .alert-box {
+      display: flex;
+      gap: 14px;
+      padding: 16px 18px;
+      background: #fff8f7;
+      border: 1px solid #f0c0bb;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+
+    .alert-box .alert-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .alert-box .alert-icon svg {
+      width: 12px;
+      height: 12px;
+      stroke: #fff;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .alert-box p {
+      font-size: 13.5px;
+      color: #7a3028;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── Info box ── */
+    .info-box {
+      display: flex;
+      gap: 14px;
+      padding: 16px 18px;
+      background: var(--brand-light);
+      border: 1px solid #c0ccdf;
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      align-items: flex-start;
+    }
+
+    .info-box .info-icon {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--brand);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .info-box .info-icon svg {
+      width: 11px;
+      height: 11px;
+      stroke: #fff;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .info-box p {
+      font-size: 13.5px;
+      color: #1a3c6e;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── Step list ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      counter-reset: step;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .step-connector {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--brand);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step-line {
+      width: 2px;
+      flex: 1;
+      min-height: 20px;
+      background: var(--rule);
+      margin: 4px 0;
+    }
+
+    .step:last-child .step-line {
+      display: none;
+    }
+
+    .step-body {
+      padding-bottom: 20px;
+      font-size: 14px;
+      color: #36393f;
+      line-height: 1.65;
+      flex: 1;
+    }
+
+    .step-body strong {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    /* ── Responsibility grid ── */
+    .resp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .resp-card {
+      padding: 16px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+    }
+
+    .resp-card .resp-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .resp-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .resp-card ul li {
+      font-size: 13px;
+      color: #36393f;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .resp-card ul li::before {
+      content: "·";
+      color: var(--brand);
+      font-size: 18px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    /* ── Print button ── */
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 8px;
+      transition: background 0.15s;
+    }
+
+    .print-btn:hover { background: #15336a; }
+
+    .print-btn svg {
+      width: 14px;
+      height: 14px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    /* ── Back to top ── */
+    .back-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      color: var(--muted);
+      text-decoration: none;
+      margin-top: 40px;
+      padding: 6px 0;
+      border-top: 1px solid var(--rule);
+      width: 100%;
+    }
+
+    .back-top:hover { color: var(--brand); }
+
+    /* ── Print styles ── */
+    @media print {
+      .sidebar, .print-btn, .back-top { display: none !important; }
+      .main { margin-left: 0; padding: 0 24px; }
+      .content { max-width: 100%; padding-top: 24px; }
+      .policy-list li { break-inside: avoid; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      :root { --sidebar-w: 0px; }
+      .sidebar { display: none; }
+      .main { margin-left: 0; padding: 0 20px 60px; }
+      .resp-grid { grid-template-columns: 1fr; }
+      h1.doc-title { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ Sidebar ══ -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="logo-mark">
+      <div class="logo-square">M2P</div>
+      <span class="logo-text">M2P Solutions</span>
+    </div>
+  </div>
+
+  <p class="sidebar-label">Table of Contents</p>
+  <nav>
+    <ul>
+      <li><a href="#objective"><span class="nav-num">01</span>Objective</a></li>
+      <li><a href="#eligibility"><span class="nav-num">02</span>Eligibility</a></li>
+      <li><a href="#overview"><span class="nav-num">03</span>Overview</a></li>
+      <li><a href="#procedure"><span class="nav-num">04</span>Procedure</a></li>
+      <li><a href="#sourcing"><span class="nav-num">05</span>Sourcing of Devices</a></li>
+      <li><a href="#ownership"><span class="nav-num">06</span>Ownership</a></li>
+      <li><a href="#usage"><span class="nav-num">07</span>Usage of Devices</a></li>
+      <li><a href="#miscellaneous"><span class="nav-num">08</span>Miscellaneous</a></li>
+    </ul>
+  </nav>
+
+  <div class="sidebar-footer">
+    Internal use only.<br />
+    M2P Solutions Private Limited<br />
+    &copy; 2026 All rights reserved.
+  </div>
+</aside>
+
+<!-- ══ Main Content ══ -->
+<main class="main">
+  <div class="content">
+
+    <!-- Document Header -->
+    <header class="doc-header">
+      <div class="doc-badge"><span class="dot"></span>Internal Policy Document</div>
+      <h1 class="doc-title">Device Usage Policy</h1>
+      <div class="doc-meta">
+        <span class="meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#5a5f6b" stroke-width="2" fill="none"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <strong>Effective Date:</strong>&nbsp;1 April 2026
+        </span>
+        <span class="meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#5a5f6b" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <strong>Version:</strong>&nbsp;1.0
+        </span>
+        <span class="meta-item">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#5a5f6b" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <strong>Audience:</strong>&nbsp;All Employees
+        </span>
+      </div>
+      <p class="confidentiality-note">
+        <strong>Confidentiality Notice:</strong> No part of this documentation may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying or recording, for any purpose without the express written permission of M2P Solutions Private Limited.
+      </p>
+      <button class="print-btn" onclick="window.print()">
+        <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print / Save PDF
+      </button>
+    </header>
+
+    <!-- ── Section 1: Objective ── -->
+    <section class="section" id="objective">
+      <div class="section-header">
+        <span class="section-num">§ 01</span>
+        <h2 class="section-title">Objective</h2>
+      </div>
+      <p>
+        The Company Device Policy has been formulated to introduce an employee-friendly and easy-to-administer scheme that allows employees to obtain any devices they may need in discharging their official duties as employees of <strong>M2P Solutions Private Limited</strong> and its subsidiaries.
+      </p>
+    </section>
+
+    <!-- ── Section 2: Eligibility ── -->
+    <section class="section" id="eligibility">
+      <div class="section-header">
+        <span class="section-num">§ 02</span>
+        <h2 class="section-title">Eligibility</h2>
+      </div>
+      <ul class="policy-list">
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>All employees of the organisation are eligible to participate in this policy, which will be administered as a <strong>Company-rented device program</strong>.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div><strong>Types of devices:</strong> Employees may be provided with <strong>mobile phones or smartphones</strong>, not exceeding <strong>one device per employee</strong>, subject to confirmation and approval limits set by the Company.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>An employee may receive a device valued up to <strong>one month of their basic pay</strong>, subject to meeting the minimum balance requirement and after accounting for any outstanding dues.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Sourcing of any device under this policy requires <strong>prior approval from HR and Finance</strong> departments.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>The Company reserves the right to <strong>modify, cancel, or replace</strong> this policy at any time at its sole discretion.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Section 3: Overview ── -->
+    <section class="section" id="overview">
+      <div class="section-header">
+        <span class="section-num">§ 03</span>
+        <h2 class="section-title">Overview</h2>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/><circle cx="12" cy="12" r="10"/></svg>
+        </span>
+        <p>Under this policy, eligible employees will receive a device that the Company will <strong>rent or lease</strong> and provide for official use. Employees will have <strong>no ownership right</strong> over the device during the lease term — it is allotted solely for the discharge of official duties.</p>
+      </div>
+    </section>
+
+    <!-- ── Section 4: Procedure ── -->
+    <section class="section" id="procedure">
+      <div class="section-header">
+        <span class="section-num">§ 04</span>
+        <h2 class="section-title">Procedure</h2>
+      </div>
+      <p>Employees can request a device through the following steps:</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-connector">
+            <div class="step-num">1</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <strong>Access the Tortoise App</strong>
+            Log in to the Tortoise platform and browse available devices to raise a request for a device of your choice.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-connector">
+            <div class="step-num">2</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-body">
+            <strong>No Credentials? Contact HR</strong>
+            If you do not have Tortoise app credentials, reach out to the <strong>HR team</strong> to obtain your login details.
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-connector">
+            <div class="step-num">3</div>
+          </div>
+          <div class="step-body">
+            <strong>Await Confirmation</strong>
+            Once your request is submitted, the Company will process the rental or lease arrangement. You will be notified when the request is fulfilled.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Section 5: Sourcing ── -->
+    <section class="section" id="sourcing">
+      <div class="section-header">
+        <span class="section-num">§ 05</span>
+        <h2 class="section-title">Sourcing of Devices</h2>
+      </div>
+      <ul class="policy-list">
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Employees can place a request for any device on the <strong>Tortoise platform</strong>, subject to the cost and eligibility criteria defined in this policy.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Once a request is placed, the Company will proceed to <strong>rent or lease the device</strong> for a predetermined period, subject to the rental/lease terms provided by its partners.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>The Company will pay rentals <strong>directly to the renting/leasing partner</strong> for the full duration of the term, commencing once the employee's request has been initiated, accepted, and fulfilled.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Section 6: Ownership ── -->
+    <section class="section" id="ownership">
+      <div class="section-header">
+        <span class="section-num">§ 06</span>
+        <h2 class="section-title">Ownership of the Device</h2>
+      </div>
+      <div class="alert-box">
+        <span class="alert-icon">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </span>
+        <p>All devices procured under this policy are <strong>exclusively owned by the renting/leasing partner</strong> and must be returned at the end of the rental/lease term — including upon termination of employment.</p>
+      </div>
+      <ul class="policy-list">
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Devices must be returned to the renting/leasing partner at the end of the lease term or upon termination of employment, whichever occurs first.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Employees may directly request the renting/leasing company to transfer <strong>device ownership</strong> to them; the renting/leasing company may agree at their sole discretion. <em>The Company will not be involved or responsible for this transaction in any manner.</em></div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Any ownership transfer is subject exclusively to the terms and conditions of the renting/leasing company.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Section 7: Usage ── -->
+    <section class="section" id="usage">
+      <div class="section-header">
+        <span class="section-num">§ 07</span>
+        <h2 class="section-title">Usage of Devices</h2>
+      </div>
+      <p>Every employee availing this policy must ensure the following:</p>
+      <ul class="policy-list">
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div><strong>Official use only.</strong> Devices obtained under this policy must be used primarily for official purposes.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div><strong>Care and condition.</strong> Devices must be kept in proper functioning condition. Any damage caused by the employee's actions or negligence will make the employee solely responsible for all related repair costs.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div><strong>Lawful use only.</strong> Devices must not be used for any illegal or unlawful activities — by the employee or any third party. The employee bears full responsibility for any consequences arising from such misuse. The Company assumes no liability.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div><strong>Authorised servicing.</strong> Any service or repair must be carried out at the employee's expense and only through the <strong>authorised service provider</strong> as communicated by the renting/leasing company.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Section 8: Miscellaneous ── -->
+    <section class="section" id="miscellaneous">
+      <div class="section-header">
+        <span class="section-num">§ 08</span>
+        <h2 class="section-title">Miscellaneous</h2>
+      </div>
+
+      <h3 class="subsection-title">Early Termination</h3>
+      <ul class="policy-list">
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>If an employee wishes to return a device before the end of the lease term, they may request the Company to place an <strong>early termination request</strong> with the renting/leasing partner.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Any <strong>penalties, charges, fees, or dues</strong> imposed on the Company due to early termination will be recovered from the employee via payroll adjustment or full and final settlement.</div>
+        </li>
+      </ul>
+
+      <h3 class="subsection-title">Company Rights</h3>
+      <ul class="policy-list">
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>The Company reserves the right to <strong>physically inspect and verify</strong> any device procured under this policy on company premises, at any time and in any manner it deems fit.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>This policy may be <strong>amended or withdrawn</strong> at any point at the sole discretion of management.</div>
+        </li>
+      </ul>
+
+      <h3 class="subsection-title">Employee Responsibilities</h3>
+      <ul class="policy-list">
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Employees are <strong>personally responsible</strong> for the device(s) issued to them — including safety, data stored, protection from viral attacks, internet security, and maintenance throughout the device's lifetime.</div>
+        </li>
+        <li>
+          <span class="bullet"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>
+          <div>Failure to comply with any part of this policy may result in <strong>disciplinary action</strong>, including but not limited to: recovery of dues, repair or servicing costs, legal action, and/or termination of employment.</div>
+        </li>
+      </ul>
+
+      <div class="alert-box" style="margin-top: 24px;">
+        <span class="alert-icon">
+          <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </span>
+        <p>By availing this policy, employees acknowledge and agree that the Company will proceed to rent/lease devices solely at their request, under terms and conditions set by renting/leasing partners — and that they are bound by all provisions of this document.</p>
+      </div>
+    </section>
+
+    <a href="#" class="back-top">
+      <svg width="13" height="13" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><polyline points="18 15 12 9 6 15"/></svg>
+      Back to top
+    </a>
+
+  </div>
+</main>
+
+<script>
+  // Highlight active sidebar link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        const active = document.querySelector(`.sidebar nav a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>

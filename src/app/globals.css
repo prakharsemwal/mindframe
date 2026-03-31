@@ -46,6 +46,12 @@
   --accent:      #F0EEE9;
   --accent-hover:#C8C5BE;
   --accent-fg:   #141312;
+
+  /* ── Paper canvas ── */
+  --paper-bg:        #181715;
+  --paper-dot:       #2E2C28;
+  --paper-node-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2);
+  --paper-node-shadow-selected: 0 2px 8px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.3);
 }
 
 * { box-sizing: border-box; }
