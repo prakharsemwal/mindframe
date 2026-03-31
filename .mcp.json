@@ -4,7 +4,7 @@
       "command": "node",
       "args": ["/Users/prakhar/Desktop/Mindframe/mcp-server/dist/index.js"],
       "env": {
-        "MINDFRAME_API_URL": "http://localhost:3001"
+        "MINDFRAME_API_URL": "https://mindframe-ruddy.vercel.app"
       }
     }
   }

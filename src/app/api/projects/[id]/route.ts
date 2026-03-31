@@ -21,13 +21,21 @@ export async function PATCH(
   req: NextRequest,
   { params }: { params: { id: string } }
 ) {
-  const project = await getProject(params.id);
-  if (!project) return NextResponse.json({ error: "Not found" }, { status: 404 });
+  try {
+    const project = await getProject(params.id);
+    if (!project) return NextResponse.json({ error: "Not found" }, { status: 404 });
 
-  const body = await req.json();
-  const updated = { ...project, ...body, id: params.id, updatedAt: now() };
-  await saveProject(updated);
-  return NextResponse.json(updated);
+    const body = await req.json();
+    const updated = { ...project, ...body, id: params.id, updatedAt: now() };
+    await saveProject(updated);
+    return NextResponse.json(updated);
+  } catch (error) {
+    console.error("PATCH /api/projects/[id] error:", error);
+    return NextResponse.json(
+      { error: "Failed to update project", details: error instanceof Error ? error.message : String(error) },
+      { status: 500 }
+    );
+  }
 }
 
 export async function DELETE(

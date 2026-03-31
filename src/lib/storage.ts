@@ -195,7 +195,12 @@ export async function getProject(id: string): Promise<Project | null> {
   const client = await getRedis();
 
   if (client) {
-    return client.get<Project>(`project:${id}`);
+    try {
+      return await client.get<Project>(`project:${id}`);
+    } catch (error) {
+      console.error("Redis getProject error:", error);
+      // Fall through to file system
+    }
   }
 
   return readJSONFile<Project>(
@@ -207,8 +212,13 @@ export async function saveProject(project: Project): Promise<void> {
   const client = await getRedis();
 
   if (client) {
-    await client.set(`project:${project.id}`, project);
-    return;
+    try {
+      await client.set(`project:${project.id}`, project);
+      return;
+    } catch (error) {
+      console.error("Redis saveProject error:", error);
+      throw error; // Re-throw so caller knows it failed
+    }
   }
 
   await writeJSONFile(
