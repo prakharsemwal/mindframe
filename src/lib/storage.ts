@@ -62,28 +62,23 @@ export async function listWorkspaces(): Promise<Workspace[]> {
   const client = getRedis();
 
   if (client) {
-    try {
-      // Redis: get all workspace keys
-      const keys = await client.keys("workspace:*");
-      if (keys.length === 0) return [];
+    // Redis mode - don't fall back to file system on error
+    const keys = await client.keys("workspace:*");
+    if (keys.length === 0) return [];
 
-      const workspaces = await Promise.all(
-        keys.map(async (key) => {
-          const data = await client.get<Workspace>(key);
-          return data;
-        })
-      );
+    const workspaces = await Promise.all(
+      keys.map(async (key) => {
+        const data = await client.get<Workspace>(key);
+        return data;
+      })
+    );
 
-      return (workspaces.filter(Boolean) as Workspace[]).sort(
-        (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
-      );
-    } catch (error) {
-      console.error("Redis listWorkspaces error:", error);
-      // Fall through to file system fallback
-    }
+    return (workspaces.filter(Boolean) as Workspace[]).sort(
+      (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+    );
   }
 
-  // File system fallback
+  // File system fallback (local development only)
   const dir = path.join(DATA_DIR, "workspaces");
   await ensureDir(dir);
   const files = await fs.readdir(dir).catch(() => [] as string[]);
@@ -144,30 +139,26 @@ export async function listProjects(workspaceId: string): Promise<Project[]> {
   const client = getRedis();
 
   if (client) {
-    try {
-      const keys = await client.keys("project:*");
-      if (keys.length === 0) return [];
+    // Redis mode - don't fall back to file system on error
+    const keys = await client.keys("project:*");
+    if (keys.length === 0) return [];
 
-      const projects = await Promise.all(
-        keys.map(async (key) => {
-          const data = await client.get<Project>(key);
-          return data;
-        })
+    const projects = await Promise.all(
+      keys.map(async (key) => {
+        const data = await client.get<Project>(key);
+        return data;
+      })
+    );
+
+    return (projects.filter(Boolean) as Project[])
+      .filter((p) => p.workspaceId === workspaceId)
+      .sort(
+        (a, b) =>
+          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
       );
-
-      return (projects.filter(Boolean) as Project[])
-        .filter((p) => p.workspaceId === workspaceId)
-        .sort(
-          (a, b) =>
-            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
-        );
-    } catch (error) {
-      console.error("Redis listProjects error:", error);
-      // Fall through to file system fallback
-    }
   }
 
-  // File system fallback
+  // File system fallback (local development only)
   const dir = path.join(DATA_DIR, "projects");
   await ensureDir(dir);
   const files = await fs.readdir(dir).catch(() => [] as string[]);
@@ -188,14 +179,11 @@ export async function getProject(id: string): Promise<Project | null> {
   const client = getRedis();
 
   if (client) {
-    try {
-      return await client.get<Project>(`project:${id}`);
-    } catch (error) {
-      console.error("Redis getProject error:", error);
-      // Fall through to file system
-    }
+    // Redis mode - don't fall back to file system on error
+    return await client.get<Project>(`project:${id}`);
   }
 
+  // File system fallback (local development only)
   return readJSONFile<Project>(
     path.join(DATA_DIR, "projects", `project-${id}.json`)
   );
