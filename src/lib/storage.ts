@@ -11,28 +11,21 @@ import type {
 } from "@/types";
 
 // ─── Redis Client ─────────────────────────────────────────────────────────────
+// Uses Upstash REST API which is stateless - safe to create per-request in serverless
 
-let redis: import("@upstash/redis").Redis | null = null;
+import { Redis } from "@upstash/redis";
 
-async function getRedis() {
-  if (redis) return redis;
+function getRedis(): Redis | null {
+  // Only use Redis if credentials are available (production/Vercel)
+  const url = process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
 
-  // Only use Redis if credentials are available (production)
-  if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-    try {
-      const { Redis } = await import("@upstash/redis");
-      redis = new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
-      });
-      return redis;
-    } catch (error) {
-      console.error("Failed to initialize Redis:", error);
-      return null;
-    }
+  if (!url || !token) {
+    return null;
   }
 
-  return null;
+  // Upstash REST client is stateless, safe to create per-request
+  return new Redis({ url, token });
 }
 
 function isProduction() {
@@ -66,7 +59,7 @@ async function writeJSONFile<T>(filepath: string, data: T): Promise<void> {
 // ─── Workspace Operations ─────────────────────────────────────────────────────
 
 export async function listWorkspaces(): Promise<Workspace[]> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     try {
@@ -105,7 +98,7 @@ export async function listWorkspaces(): Promise<Workspace[]> {
 }
 
 export async function getWorkspace(id: string): Promise<Workspace | null> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     return client.get<Workspace>(`workspace:${id}`);
@@ -117,7 +110,7 @@ export async function getWorkspace(id: string): Promise<Workspace | null> {
 }
 
 export async function saveWorkspace(workspace: Workspace): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     await client.set(`workspace:${workspace.id}`, workspace);
@@ -131,7 +124,7 @@ export async function saveWorkspace(workspace: Workspace): Promise<void> {
 }
 
 export async function deleteWorkspace(id: string): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     await client.del(`workspace:${id}`);
@@ -148,7 +141,7 @@ export async function deleteWorkspace(id: string): Promise<void> {
 // ─── Project Operations ───────────────────────────────────────────────────────
 
 export async function listProjects(workspaceId: string): Promise<Project[]> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     try {
@@ -192,7 +185,7 @@ export async function listProjects(workspaceId: string): Promise<Project[]> {
 }
 
 export async function getProject(id: string): Promise<Project | null> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     try {
@@ -209,7 +202,7 @@ export async function getProject(id: string): Promise<Project | null> {
 }
 
 export async function saveProject(project: Project): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     try {
@@ -228,7 +221,7 @@ export async function saveProject(project: Project): Promise<void> {
 }
 
 export async function deleteProject(id: string): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     await client.del(`project:${id}`);
@@ -246,7 +239,7 @@ export async function saveDoc(
   docId: string,
   content: string
 ): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     await client.set(`doc:${docId}`, content);
@@ -259,7 +252,7 @@ export async function saveDoc(
 }
 
 export async function getDoc(docId: string): Promise<string | null> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     return client.get<string>(`doc:${docId}`);
@@ -276,7 +269,7 @@ export async function getDoc(docId: string): Promise<string | null> {
 }
 
 export async function deleteDoc(docId: string): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     await client.del(`doc:${docId}`);
@@ -297,7 +290,7 @@ export async function deleteDoc(docId: string): Promise<void> {
 export async function getAnnotations(
   docId: string
 ): Promise<DocAnnotations | null> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     return client.get<DocAnnotations>(`annotations:${docId}`);
@@ -311,7 +304,7 @@ export async function getAnnotations(
 export async function saveAnnotations(
   annotations: DocAnnotations
 ): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     await client.set(`annotations:${annotations.docId}`, annotations);
@@ -331,7 +324,7 @@ export async function saveAnnotations(
 export async function getLibrary(
   workspaceId: string
 ): Promise<Library> {
-  const client = await getRedis();
+  const client = getRedis();
 
   const defaultLibrary: Library = {
     workspaceId,
@@ -351,7 +344,7 @@ export async function getLibrary(
 }
 
 export async function saveLibrary(library: Library): Promise<void> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     await client.set(`library:${library.workspaceId}`, library);
@@ -374,7 +367,7 @@ export async function saveImage(
   filename: string,
   data: Buffer
 ): Promise<string> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     // Store image as base64 in Redis (not ideal for large images, but works for small ones)
@@ -391,7 +384,7 @@ export async function saveImage(
 }
 
 export async function getImage(name: string): Promise<Buffer | null> {
-  const client = await getRedis();
+  const client = getRedis();
 
   if (client) {
     const base64 = await client.get<string>(`image:${name}`);
@@ -411,7 +404,7 @@ export async function getImage(name: string): Promise<Buffer | null> {
 // ─── Data Migration Helper ────────────────────────────────────────────────────
 
 export async function migrateToRedis(): Promise<{ success: boolean; migrated: string[] }> {
-  const client = await getRedis();
+  const client = getRedis();
   if (!client) {
     return { success: false, migrated: [] };
   }
