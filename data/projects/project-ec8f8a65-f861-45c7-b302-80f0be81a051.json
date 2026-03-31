@@ -3,7 +3,7 @@
   "name": "Test Update",
   "workspaceId": "830b1924-05c2-4a15-b3d0-9d33d541d544",
   "createdAt": "2026-03-18T22:30:12.816Z",
-  "updatedAt": "2026-03-31T17:21:11.776Z",
+  "updatedAt": "2026-03-31T17:59:38.558Z",
   "nodes": [
     {
       "id": "3b0c47e8-30c3-430a-b6c3-960550337ff4",
@@ -19,8 +19,8 @@
         "createdAt": "2026-03-18T22:36:51.772Z",
         "updatedAt": "2026-03-18T22:36:51.772Z"
       },
-      "width": 84,
-      "height": 60,
+      "width": 137,
+      "height": 78,
       "selected": false,
       "dragging": false,
       "positionAbsolute": {
@@ -42,8 +42,8 @@
         "createdAt": "2026-03-18T22:38:57.655Z",
         "updatedAt": "2026-03-18T22:38:57.655Z"
       },
-      "width": 84,
-      "height": 60,
+      "width": 137,
+      "height": 78,
       "selected": false,
       "positionAbsolute": {
         "x": 417.192517884707,
@@ -55,8 +55,8 @@
       "id": "8a71fe45-8e33-4854-baa4-f2ea095e4c51",
       "type": "mindmap",
       "position": {
-        "x": -132.28243922884104,
-        "y": 272.0881002735642
+        "x": -753.7003979742468,
+        "y": -86.96843520890621
       },
       "data": {
         "title": "In a new problem of Tortoise, we have",
@@ -68,15 +68,19 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-19T06:13:28.625Z"
       },
-      "width": 1458,
-      "height": 95,
-      "selected": false,
+      "width": 200,
+      "height": 388,
+      "selected": true,
       "dragging": false,
       "positionAbsolute": {
-        "x": -132.28243922884104,
-        "y": 272.0881002735642
+        "x": -753.7003979742468,
+        "y": 188.03156479109379
       },
-      "resizing": false
+      "resizing": true,
+      "style": {
+        "width": 200,
+        "height": 388
+      }
     },
     {
       "id": "5ac20d13-976a-429c-9021-7bf724130848",
@@ -95,8 +99,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1483,
-      "height": 95,
+      "width": 1292,
+      "height": 113,
       "selected": false,
       "dragging": false
     },
@@ -157,8 +161,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1467,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "c431f98e-acf7-4dae-9837-fa3f6dfed988",
@@ -223,8 +227,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1438,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "ffbd54ac-579a-4df8-967a-248a473501bf",
@@ -263,8 +267,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1455,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "c34d8850-da94-4537-8a4b-7a48ccc83479",
@@ -283,8 +287,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1489,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "940ec8ff-8a78-4ff5-82fd-f9ee61545436",
@@ -323,7 +327,7 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1492,
+      "width": 1292,
       "height": 113
     },
     {
@@ -363,7 +367,7 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1492,
+      "width": 1292,
       "height": 113
     },
     {
@@ -429,8 +433,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1478,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "7b91bf2a-7a7c-4a0d-b222-8ec23671a653",
@@ -449,8 +453,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1456,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "b3d9738f-4f6d-4029-8a86-49adb3443911",
@@ -469,8 +473,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1440,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "d4dc38ec-341d-412d-8be1-b73776c8d5c7",
@@ -489,8 +493,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1477,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "08316c8b-6317-48eb-a1c0-5063aeac39f1",
@@ -509,8 +513,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1462,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "9d2d6930-c1d2-4f5b-9b9d-5c1d8c767617",
@@ -529,8 +533,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1467,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "5ca2d934-e92e-4c48-a875-d74fe2b331d5",
@@ -549,8 +553,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1447,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "b8bb9e42-7ae5-4ede-9390-a8483629687e",
@@ -569,8 +573,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1461,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "3d7ffdd0-16b7-4400-9738-3adf31271343",
@@ -589,8 +593,8 @@
         "createdAt": "2026-03-18T22:49:35.689Z",
         "updatedAt": "2026-03-18T22:49:35.689Z"
       },
-      "width": 1458,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "2fa38824-0969-46e3-b06f-7f30027d3b69",
@@ -691,7 +695,7 @@
       },
       "width": 252,
       "height": 357,
-      "selected": true,
+      "selected": false,
       "positionAbsolute": {
         "x": -409.42160024607927,
         "y": -271.8297838387416
@@ -720,8 +724,8 @@
         "createdAt": "2026-03-19T06:13:18.661Z",
         "updatedAt": "2026-03-19T06:13:18.661Z"
       },
-      "width": 1305,
-      "height": 78
+      "width": 1292,
+      "height": 96
     },
     {
       "id": "d4046897-0808-4436-823b-fd113593a719",
@@ -880,8 +884,8 @@
         "createdAt": "2026-03-19T06:13:18.661Z",
         "updatedAt": "2026-03-19T06:13:18.661Z"
       },
-      "width": 1424,
-      "height": 78
+      "width": 1292,
+      "height": 96
     },
     {
       "id": "c84d7c51-abc2-4611-8e12-c77a3b68ad03",
@@ -1220,8 +1224,8 @@
         "createdAt": "2026-03-19T06:13:18.662Z",
         "updatedAt": "2026-03-19T06:13:18.662Z"
       },
-      "width": 1465,
-      "height": 95
+      "width": 1292,
+      "height": 113
     },
     {
       "id": "e55d99e4-b523-47ab-9dce-960276438923",
@@ -1262,6 +1266,40 @@
       },
       "width": 389,
       "height": 78
+    },
+    {
+      "id": "ed564076-e40e-40a7-8b4b-5b847f9a010d",
+      "type": "mindmap",
+      "position": {
+        "x": 988.442438246151,
+        "y": 969.0338538340468
+      },
+      "data": {
+        "title": "MCP Connector Test",
+        "body": "This node was created via the Mindframe MCP connector from Claude Code.",
+        "tag": "commit",
+        "source": "conversation",
+        "createdAt": "2026-03-31T17:27:48.066Z",
+        "updatedAt": "2026-03-31T17:27:48.066Z"
+      },
+      "width": 426,
+      "height": 78
+    },
+    {
+      "id": "e2d1f619-38ca-471b-92e1-3cec643e66e6",
+      "type": "mindmap",
+      "position": {
+        "x": 1288.4424382461511,
+        "y": 969.0338538340468
+      },
+      "data": {
+        "title": "Redis Fix for Vercel Deployment",
+        "body": "## Summary\n\nFixed critical Redis storage issues preventing Mindframe from working on Vercel deployment.\n\n## Problem\n- 500 errors on all API endpoints (workspaces, projects, nodes)\n- Data not persisting between requests\n- Connection timeouts\n- MCP connector failing on production\n\n## Root Causes\n1. **Redis client initialization** - Module-level caching didn't work reliably in serverless\n2. **Fallback to file system** - When Redis errored, code fell back to file system operations which don't work on Vercel's ephemeral serverless environment\n3. **Silent error swallowing** - Errors weren't propagating properly for debugging\n\n## Fixes Applied\n\n### 1. Storage Layer (`src/lib/storage.ts`)\n- Changed from async dynamic import to static import for Upstash Redis\n- Made `getRedis()` synchronous (Upstash REST is stateless)\n- Removed try-catch fallback pattern - let Redis errors propagate\n- File system fallback now only runs when Redis is NOT configured (local dev)\n\n### 2. Health Endpoint (`/api/health`)\n- Added comprehensive Redis diagnostics\n- Tests write/read operations\n- Reports workspace and project counts\n- Shows connection status\n\n### 3. API Routes\n- Added proper error handling with detailed error messages\n- Errors now return useful debugging info\n\n## Verification\n```json\n{\n  \"status\": \"ok\",\n  \"redis\": {\n    \"connection\": \"ok\",\n    \"writeTest\": \"passed\",\n    \"readTest\": \"passed\",\n    \"workspaceCount\": 3,\n    \"projectCount\": 2\n  }\n}\n```\n\n## Commits\n- `d78821b` - Fix Redis storage for serverless deployment\n- `4e22719` - Fix error handling for serverless deployment",
+        "tag": "commit",
+        "source": "conversation",
+        "createdAt": "2026-03-31T17:59:38.542Z",
+        "updatedAt": "2026-03-31T17:59:38.542Z"
+      }
     }
   ],
   "edges": [

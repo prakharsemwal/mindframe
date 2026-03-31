@@ -13,9 +13,22 @@ import type {
 // ─── Redis Client ─────────────────────────────────────────────────────────────
 // Uses Upstash REST API which is stateless - safe to create per-request in serverless
 
-import { Redis } from "@upstash/redis";
+let Redis: typeof import("@upstash/redis").Redis | null = null;
 
-function getRedis(): Redis | null {
+async function loadRedis() {
+  if (Redis === null) {
+    try {
+      const module = await import("@upstash/redis");
+      Redis = module.Redis;
+    } catch (error) {
+      console.error("Failed to load @upstash/redis:", error);
+      Redis = undefined as any; // Mark as failed
+    }
+  }
+  return Redis;
+}
+
+async function getRedis(): Promise<import("@upstash/redis").Redis | null> {
   // Only use Redis if credentials are available (production/Vercel)
   const url = process.env.UPSTASH_REDIS_REST_URL;
   const token = process.env.UPSTASH_REDIS_REST_TOKEN;
@@ -24,12 +37,18 @@ function getRedis(): Redis | null {
     return null;
   }
 
-  // Upstash REST client is stateless, safe to create per-request
-  return new Redis({ url, token });
-}
+  const RedisClass = await loadRedis();
+  if (!RedisClass) {
+    return null;
+  }
 
-function isProduction() {
-  return !!(process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN);
+  try {
+    // Upstash REST client is stateless, safe to create per-request
+    return new RedisClass({ url, token });
+  } catch (error) {
+    console.error("Failed to create Redis client:", error);
+    return null;
+  }
 }
 
 // ─── File System Helpers (Local Development) ──────────────────────────────────
@@ -59,23 +78,28 @@ async function writeJSONFile<T>(filepath: string, data: T): Promise<void> {
 // ─── Workspace Operations ─────────────────────────────────────────────────────
 
 export async function listWorkspaces(): Promise<Workspace[]> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    // Redis mode - don't fall back to file system on error
-    const keys = await client.keys("workspace:*");
-    if (keys.length === 0) return [];
+    try {
+      // Redis mode - don't fall back to file system on error
+      const keys = await client.keys("workspace:*");
+      if (keys.length === 0) return [];
 
-    const workspaces = await Promise.all(
-      keys.map(async (key) => {
-        const data = await client.get<Workspace>(key);
-        return data;
-      })
-    );
+      const workspaces = await Promise.all(
+        keys.map(async (key) => {
+          const data = await client.get<Workspace>(key);
+          return data;
+        })
+      );
 
-    return (workspaces.filter(Boolean) as Workspace[]).sort(
-      (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
-    );
+      return (workspaces.filter(Boolean) as Workspace[]).sort(
+        (a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      );
+    } catch (error) {
+      console.error("Redis listWorkspaces error:", error);
+      throw error;
+    }
   }
 
   // File system fallback (local development only)
@@ -93,10 +117,15 @@ export async function listWorkspaces(): Promise<Workspace[]> {
 }
 
 export async function getWorkspace(id: string): Promise<Workspace | null> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    return client.get<Workspace>(`workspace:${id}`);
+    try {
+      return await client.get<Workspace>(`workspace:${id}`);
+    } catch (error) {
+      console.error("Redis getWorkspace error:", error);
+      throw error;
+    }
   }
 
   return readJSONFile<Workspace>(
@@ -105,11 +134,16 @@ export async function getWorkspace(id: string): Promise<Workspace | null> {
 }
 
 export async function saveWorkspace(workspace: Workspace): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    await client.set(`workspace:${workspace.id}`, workspace);
-    return;
+    try {
+      await client.set(`workspace:${workspace.id}`, workspace);
+      return;
+    } catch (error) {
+      console.error("Redis saveWorkspace error:", error);
+      throw error;
+    }
   }
 
   await writeJSONFile(
@@ -119,11 +153,16 @@ export async function saveWorkspace(workspace: Workspace): Promise<void> {
 }
 
 export async function deleteWorkspace(id: string): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    await client.del(`workspace:${id}`);
-    return;
+    try {
+      await client.del(`workspace:${id}`);
+      return;
+    } catch (error) {
+      console.error("Redis deleteWorkspace error:", error);
+      throw error;
+    }
   }
 
   try {
@@ -136,26 +175,31 @@ export async function deleteWorkspace(id: string): Promise<void> {
 // ─── Project Operations ───────────────────────────────────────────────────────
 
 export async function listProjects(workspaceId: string): Promise<Project[]> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    // Redis mode - don't fall back to file system on error
-    const keys = await client.keys("project:*");
-    if (keys.length === 0) return [];
+    try {
+      // Redis mode - don't fall back to file system on error
+      const keys = await client.keys("project:*");
+      if (keys.length === 0) return [];
 
-    const projects = await Promise.all(
-      keys.map(async (key) => {
-        const data = await client.get<Project>(key);
-        return data;
-      })
-    );
-
-    return (projects.filter(Boolean) as Project[])
-      .filter((p) => p.workspaceId === workspaceId)
-      .sort(
-        (a, b) =>
-          new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+      const projects = await Promise.all(
+        keys.map(async (key) => {
+          const data = await client.get<Project>(key);
+          return data;
+        })
       );
+
+      return (projects.filter(Boolean) as Project[])
+        .filter((p) => p.workspaceId === workspaceId)
+        .sort(
+          (a, b) =>
+            new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
+        );
+    } catch (error) {
+      console.error("Redis listProjects error:", error);
+      throw error;
+    }
   }
 
   // File system fallback (local development only)
@@ -176,11 +220,16 @@ export async function listProjects(workspaceId: string): Promise<Project[]> {
 }
 
 export async function getProject(id: string): Promise<Project | null> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    // Redis mode - don't fall back to file system on error
-    return await client.get<Project>(`project:${id}`);
+    try {
+      // Redis mode - don't fall back to file system on error
+      return await client.get<Project>(`project:${id}`);
+    } catch (error) {
+      console.error("Redis getProject error:", error);
+      throw error;
+    }
   }
 
   // File system fallback (local development only)
@@ -190,7 +239,7 @@ export async function getProject(id: string): Promise<Project | null> {
 }
 
 export async function saveProject(project: Project): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
     try {
@@ -209,11 +258,16 @@ export async function saveProject(project: Project): Promise<void> {
 }
 
 export async function deleteProject(id: string): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    await client.del(`project:${id}`);
-    return;
+    try {
+      await client.del(`project:${id}`);
+      return;
+    } catch (error) {
+      console.error("Redis deleteProject error:", error);
+      throw error;
+    }
   }
 
   try {
@@ -227,11 +281,16 @@ export async function saveDoc(
   docId: string,
   content: string
 ): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    await client.set(`doc:${docId}`, content);
-    return;
+    try {
+      await client.set(`doc:${docId}`, content);
+      return;
+    } catch (error) {
+      console.error("Redis saveDoc error:", error);
+      throw error;
+    }
   }
 
   const dir = path.join(DATA_DIR, "docs");
@@ -240,10 +299,15 @@ export async function saveDoc(
 }
 
 export async function getDoc(docId: string): Promise<string | null> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    return client.get<string>(`doc:${docId}`);
+    try {
+      return await client.get<string>(`doc:${docId}`);
+    } catch (error) {
+      console.error("Redis getDoc error:", error);
+      throw error;
+    }
   }
 
   try {
@@ -257,12 +321,17 @@ export async function getDoc(docId: string): Promise<string | null> {
 }
 
 export async function deleteDoc(docId: string): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    await client.del(`doc:${docId}`);
-    await client.del(`annotations:${docId}`);
-    return;
+    try {
+      await client.del(`doc:${docId}`);
+      await client.del(`annotations:${docId}`);
+      return;
+    } catch (error) {
+      console.error("Redis deleteDoc error:", error);
+      throw error;
+    }
   }
 
   try {
@@ -278,10 +347,15 @@ export async function deleteDoc(docId: string): Promise<void> {
 export async function getAnnotations(
   docId: string
 ): Promise<DocAnnotations | null> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    return client.get<DocAnnotations>(`annotations:${docId}`);
+    try {
+      return await client.get<DocAnnotations>(`annotations:${docId}`);
+    } catch (error) {
+      console.error("Redis getAnnotations error:", error);
+      throw error;
+    }
   }
 
   return readJSONFile<DocAnnotations>(
@@ -292,11 +366,16 @@ export async function getAnnotations(
 export async function saveAnnotations(
   annotations: DocAnnotations
 ): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    await client.set(`annotations:${annotations.docId}`, annotations);
-    return;
+    try {
+      await client.set(`annotations:${annotations.docId}`, annotations);
+      return;
+    } catch (error) {
+      console.error("Redis saveAnnotations error:", error);
+      throw error;
+    }
   }
 
   const dir = path.join(DATA_DIR, "docs");
@@ -312,7 +391,7 @@ export async function saveAnnotations(
 export async function getLibrary(
   workspaceId: string
 ): Promise<Library> {
-  const client = getRedis();
+  const client = await getRedis();
 
   const defaultLibrary: Library = {
     workspaceId,
@@ -321,8 +400,13 @@ export async function getLibrary(
   };
 
   if (client) {
-    const data = await client.get<Library>(`library:${workspaceId}`);
-    return data || defaultLibrary;
+    try {
+      const data = await client.get<Library>(`library:${workspaceId}`);
+      return data || defaultLibrary;
+    } catch (error) {
+      console.error("Redis getLibrary error:", error);
+      throw error;
+    }
   }
 
   const data = await readJSONFile<Library>(
@@ -332,11 +416,16 @@ export async function getLibrary(
 }
 
 export async function saveLibrary(library: Library): Promise<void> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    await client.set(`library:${library.workspaceId}`, library);
-    return;
+    try {
+      await client.set(`library:${library.workspaceId}`, library);
+      return;
+    } catch (error) {
+      console.error("Redis saveLibrary error:", error);
+      throw error;
+    }
   }
 
   const dir = path.join(DATA_DIR, "library");
@@ -355,13 +444,18 @@ export async function saveImage(
   filename: string,
   data: Buffer
 ): Promise<string> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    // Store image as base64 in Redis (not ideal for large images, but works for small ones)
-    const name = `${nodeId}-${filename}`;
-    await client.set(`image:${name}`, data.toString("base64"));
-    return `/api/images/${name}`;
+    try {
+      // Store image as base64 in Redis (not ideal for large images, but works for small ones)
+      const name = `${nodeId}-${filename}`;
+      await client.set(`image:${name}`, data.toString("base64"));
+      return `/api/images/${name}`;
+    } catch (error) {
+      console.error("Redis saveImage error:", error);
+      throw error;
+    }
   }
 
   const dir = path.join(DATA_DIR, "images");
@@ -372,14 +466,19 @@ export async function saveImage(
 }
 
 export async function getImage(name: string): Promise<Buffer | null> {
-  const client = getRedis();
+  const client = await getRedis();
 
   if (client) {
-    const base64 = await client.get<string>(`image:${name}`);
-    if (base64) {
-      return Buffer.from(base64, "base64");
+    try {
+      const base64 = await client.get<string>(`image:${name}`);
+      if (base64) {
+        return Buffer.from(base64, "base64");
+      }
+      return null;
+    } catch (error) {
+      console.error("Redis getImage error:", error);
+      throw error;
     }
-    return null;
   }
 
   try {
@@ -392,7 +491,7 @@ export async function getImage(name: string): Promise<Buffer | null> {
 // ─── Data Migration Helper ────────────────────────────────────────────────────
 
 export async function migrateToRedis(): Promise<{ success: boolean; migrated: string[] }> {
-  const client = getRedis();
+  const client = await getRedis();
   if (!client) {
     return { success: false, migrated: [] };
   }

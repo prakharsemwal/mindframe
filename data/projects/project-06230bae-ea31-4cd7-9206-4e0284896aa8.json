@@ -1,0 +1,29 @@
+{
+  "id": "06230bae-ea31-4cd7-9206-4e0284896aa8",
+  "name": "Skin Conditions",
+  "workspaceId": "9b13d7e1-9b22-4d98-8775-d0f0020be6f6",
+  "createdAt": "2026-03-31T18:30:00.000Z",
+  "updatedAt": "2026-03-31T18:30:00.000Z",
+  "nodes": [
+    {
+      "id": "a8bde21a-b63a-4bb1-a4fc-7b3b48d9e856",
+      "type": "mindmap",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "data": {
+        "title": "What is Seborrheic Dermatitis?",
+        "body": "**Seborrheic Dermatitis** is a common, chronic inflammatory skin condition that primarily affects areas of the body with high concentrations of sebaceous (oil-producing) glands.\n\n## Key Facts\n\n- **Affected areas**: Scalp, face (especially around the nose, eyebrows, and ears), and upper chest\n- **Appearance**: Red, scaly, flaky, and sometimes itchy patches; on the scalp, it's often known as dandruff\n- **Causes**: The exact cause isn't fully understood, but it's believed to involve:\n  - Overgrowth of *Malassezia* yeast (naturally present on skin)\n  - Immune system response\n  - Genetic factors\n  - Environmental triggers (stress, cold weather, hormonal changes)\n\n## Common Symptoms\n\n1. White or yellowish flaky scales (dandruff)\n2. Red, greasy-looking skin\n3. Itching or burning sensation\n4. Crusty patches on the scalp\n\n## Treatment Options\n\n- **Medicated shampoos**: Containing ketoconazole, selenium sulfide, zinc pyrithione, or coal tar\n- **Topical antifungals**: To reduce Malassezia overgrowth\n- **Topical corticosteroids**: For inflammation (short-term use)\n- **Calcineurin inhibitors**: Tacrolimus or pimecrolimus for sensitive areas\n\n## Important Notes\n\n- It's a chronic condition that tends to flare and remit\n- Not contagious\n- Can affect infants (\"cradle cap\") and adults\n- Often manageable with proper skincare routine",
+        "tag": "commit",
+        "createdAt": "2026-03-31T18:30:00.000Z",
+        "updatedAt": "2026-03-31T18:30:00.000Z"
+      },
+      "width": 400,
+      "height": 600
+    }
+  ],
+  "edges": [],
+  "docs": [],
+  "customTags": []
+}

@@ -1,0 +1,28 @@
+{
+  "id": "4fd37667-eeab-409f-b74a-38420dad7a7f",
+  "name": "Review Nudge System",
+  "workspaceId": "830b1924-05c2-4a15-b3d0-9d33d541d544",
+  "createdAt": "2026-03-31T18:08:20.368Z",
+  "updatedAt": "2026-03-31T18:08:35.008Z",
+  "nodes": [
+    {
+      "id": "416c0a7e-2a7f-4d13-be89-e348e9c7b5bc",
+      "type": "mindmap",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "data": {
+        "title": "Redis Fix for Vercel Deployment",
+        "body": "## Summary\n\nFixed critical Redis storage issues preventing Mindframe from working on Vercel deployment.\n\n## Problem\n- 500 errors on all API endpoints (workspaces, projects, nodes)\n- Data not persisting between requests\n- Connection timeouts\n- MCP connector failing on production\n\n## Root Causes\n1. **Redis client initialization** - Module-level caching didn't work reliably in serverless\n2. **Fallback to file system** - When Redis errored, code fell back to file system operations which don't work on Vercel's ephemeral serverless environment\n3. **Silent error swallowing** - Errors weren't propagating properly for debugging\n\n## Fixes Applied\n\n### 1. Storage Layer (`src/lib/storage.ts`)\n- Changed from async dynamic import to static import for Upstash Redis\n- Made `getRedis()` synchronous (Upstash REST is stateless)\n- Removed try-catch fallback pattern - let Redis errors propagate\n- File system fallback now only runs when Redis is NOT configured (local dev)\n\n### 2. Health Endpoint (`/api/health`)\n- Added comprehensive Redis diagnostics\n- Tests write/read operations\n- Reports workspace and project counts\n- Shows connection status\n\n### 3. API Routes\n- Added proper error handling with detailed error messages\n- Errors now return useful debugging info\n\n## Verification\n```json\n{\n  \"status\": \"ok\",\n  \"redis\": {\n    \"connection\": \"ok\",\n    \"writeTest\": \"passed\",\n    \"readTest\": \"passed\"\n  }\n}\n```\n\n## Commits\n- `d78821b` - Fix Redis storage for serverless deployment\n- `4e22719` - Fix error handling for serverless deployment",
+        "tag": "commit",
+        "source": "conversation",
+        "createdAt": "2026-03-31T18:08:34.993Z",
+        "updatedAt": "2026-03-31T18:08:34.993Z"
+      }
+    }
+  ],
+  "edges": [],
+  "docs": [],
+  "customTags": []
+}
